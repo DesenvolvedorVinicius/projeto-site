@@ -4,42 +4,98 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
     <title>Site de Estudos</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
     <link rel="stylesheet" href="estilos/style.css">
+    <link rel="stylesheet" href="estilos/media-query.css">
 </head>
 <body>
     <header>
-        <h1>Revisão Espaçada</h1> <!--NOME DO SITE / studycon-->
+        <nav class="nav-bar">
+            <div class="logo">
+                <h1>Logo</h1>
+            </div>
+            <!--
+                Ajeitar o header : [Logo] [nav-list]
+            -->
+            <div class="nav-list">
+                <ul>
+                    <li class="nav-item"><a href="#" class="nav-link">Sobre nós</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Serviços</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Contato</a></li>
+                </ul>
+            </div>
+
+            <div class="botoes">
+                <div class="login-button">
+                    <button><a href="#">Entrar</a></button>
+                </div>
+                <div class="mobile-menu-icon">
+                    <button onclick="menuShow()"><span class="material-icons">menu</span></button>
+                </div>
+            </div>
+        </nav>
+
+        <div class="mobile-menu">
+            <ul>
+                <li class="nav-item"><a href="#" class="nav-link">Sobre nós</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Serviços</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Contato</a></li>
+            </ul>
+        </div>
     </header>
-    <nav>
-        <a href="#">OPÇÃO 1</a>
-        <a href="#">OPÇÃO 2</a>
-        <a href="#">OPÇÃO 3</a>
-        <a href="#">OPÇÃO 4</a>
-    </nav>
+    
     <main>
         <section>
-            <h1>Domine o conhecimento por meio de flashcards</h1>
-            <p>Os vestibulares e concursos públicos têm abarcado um conteúdo cada vez maior e, com o atual método educacional, principalmente os famosos cursinhos, é quase impossível revisar tudo de maneira concisa e eficiente.Diante disso, apresentamos o método de estudo ativo baseado em flashcards, uma abordagem comprovada para impulsionar o aprendizado de maneira rápida e eficaz. Neste artigo, abordaremos por que essa ferramenta é tão útil e valiosa na sua caminhada a fim de consolidar o conhecimento. Prepare-se para uma jornada de estudos mais sólida! </p>
-            <h2>Por que flashcards são eficientes</h2>
-            <ul>
-                <li>Agilidade nas suas revisões</li>
-                <li>Objetividade nos assuntos abordados</li>
-                <li>Você estará testando seu conhecimento constantemente</li>
-            </ul>
-            <h2>Como utilizar os flashcards</h2>
-            <ul>
-                <li>Você pode aliar textos verbais com imagens;</li>
-                <li>Escreva os enunciados de leis fa física, por exemplo;</li>
-                <li>Escreva qualquer fórmula de modo a fixá-la com maior agilidade;</li>
-            </ul>
-            <h2>Dicas de como usar</h2>
-                <ul>
-                    <li>Seja objetivo em suas anotações, de modo a poupar tempo focar nos tópicos em que você tem mais dificuldade;</li>
-                    <li>Divida um conteúdo difícil em vários tópicos, de modo a se aprofundar progressivamente;</li>
-                    <li>No caso de perguntas, coloque em suas resposas aquilo que você já errou anteriormente ou sabe que tem dificuldade;</li>
-                </ul>
+            <div class="A DEFINIR">
+                <h1>Domine o conhecimento por meio de flashcards</h1>
+                <p>Os vestibulares e concursos públicos têm abarcado um conteúdo cada vez maior e, com o atual método educacional, principalmente os famosos cursinhos, é quase impossível revisar tudo de maneira concisa e eficiente.Diante disso, apresentamos o método de estudo ativo baseado em flashcards, uma abordagem comprovada para impulsionar o aprendizado de maneira rápida e eficaz. Neste artigo, abordaremos por que essa ferramenta é tão útil e valiosa na sua caminhada a fim de consolidar o conhecimento. Prepare-se para uma jornada de estudos mais sólida! </p>
+            </div> 
         </section>
+
+        <section class="section-conteudo">
+            <div class="conteudo-escrito">
+                <h2>Por que flashcards são eficientes</h2>
+                <ul>
+                    <li>Agilidade nas suas revisões</li>
+                    <li>Objetividade nos assuntos abordados</li>
+                    <li>Você estará testando seu conhecimento constantemente</li>
+                </ul>
+            </div>
+            <div class="imagem">
+                <img src="imagens/ficha-pequeno.jpg" alt="">
+            </div>
+        </section>
+
+        <section>
+            <div class="conteudo-escrito">
+                <h2>Como utilizar os flashcards</h2>
+                <ul>
+                    <li>Você pode aliar textos verbais com imagens;</li>
+                    <li>Escreva os enunciados de leis fa física, por exemplo;</li>
+                    <li>Escreva qualquer fórmula de modo a fixá-la com maior agilidade;</li>
+                </ul>
+            </div>
+            <div class="imagem">
+                <img src="" alt="">
+            </div>
+        </section>
+
+        <section>
+            <div class="conteudo-escrito">
+                <h2>Dicas de como usar</h2>
+                    <ul>
+                        <li>Seja objetivo em suas anotações, de modo a poupar tempo focar nos tópicos em que você tem mais dificuldade;</li>
+                        <li>Divida um conteúdo difícil em vários tópicos, de modo a se aprofundar progressivamente;</li>
+                        <li>No caso de perguntas, coloque em suas resposas aquilo que você já errou anteriormente ou sabe que tem dificuldade;</li>
+                    </ul>
+            </div>
+            <div class="imagem">
+                <img src="" alt="">
+            </div>
+        </section>
+
         <section>
             <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa earum iure, delectus, rem ea corrupti dicta exercitationem, distinctio dolorum soluta dolores quas est. Qui, rem magni quibusdam quidem dolores officiis. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam error quo assumenda quos, veritatis veniam alias provident necessitatibus. Minus veritatis perspiciatis eligendi optio quos, debitis cumque ex asperiores esse vel. Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit ab saepe adipisci ullam accusamus iusto magni atque dolore asperiores quasi quo corrupti quaerat quas vitae, quibusdam exercitationem ducimus dolores porro.</p>
             <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa earum iure, delectus, rem ea corrupti dicta exercitationem, distinctio dolorum soluta dolores quas est. Qui, rem magni quibusdam quidem dolores officiis. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam error quo assumenda quos, veritatis veniam alias provident necessitatibus. Minus veritatis perspiciatis eligendi optio quos, debitis cumque ex asperiores esse vel. Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit ab saepe adipisci ullam accusamus iusto magni atque dolore asperiores quasi quo corrupti quaerat quas vitae, quibusdam exercitationem ducimus dolores porro.</p>
@@ -48,8 +104,17 @@
             <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa earum iure, delectus, rem ea corrupti dicta exercitationem, distinctio dolorum soluta dolores quas est. Qui, rem magni quibusdam quidem dolores officiis. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam error quo assumenda quos, veritatis veniam alias provident necessitatibus. Minus veritatis perspiciatis eligendi optio quos, debitis cumque ex asperiores esse vel. Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit ab saepe adipisci ullam accusamus iusto magni atque dolore asperiores quasi quo corrupti quaerat quas vitae, quibusdam exercitationem ducimus dolores porro.</p>
         </section>
     </main>
-    <footer>
 
-    </footer>
+
+    <script>
+        function menuShow() {
+            let menuMobile = document.querySelector('.mobile-menu')
+            if (menuMobile.classList.contains('open')) {
+                menuMobile.classList.remove('open');
+            } else {
+                menuMobile.classList.add('open')
+            }
+        }
+    </script>
 </body>
 </html>

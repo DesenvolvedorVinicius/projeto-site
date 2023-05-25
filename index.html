@@ -10,21 +10,20 @@
     <link rel="stylesheet" href="estilos/style.css">
     <link rel="stylesheet" href="estilos/media-query.css">
 </head>
-<body>
+<body onresize="mudouTamanho()">
     <header>
         <nav class="nav-bar">
-            <div class="logo">
-                <h1>Logo</h1>
-            </div>
-            <!--
-                Ajeitar o header : [Logo] [nav-list]
-            -->
-            <div class="nav-list">
-                <ul>
-                    <li class="nav-item"><a href="#" class="nav-link">Sobre nós</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">Serviços</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">Contato</a></li>
-                </ul>
+            <div class="nav-left">
+                <div class="logo">
+                    <h1>Logo</h1>
+                </div>
+                <div class="nav-list">
+                    <ul>
+                        <li class="nav-item"><a href="#" class="nav-link">Sobre nós</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link">Serviços</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link">Contato</a></li>
+                    </ul>
+                </div>
             </div>
 
             <div class="botoes">
@@ -41,40 +40,26 @@
             <ul>
                 <li class="nav-item"><a href="#" class="nav-link">Sobre nós</a></li>
                 <li class="nav-item"><a href="#" class="nav-link">Serviços</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">Contato</a></li>
+                <li class="nav-item-ultimo"><a href="#" class="nav-link">Contato</a></li>
             </ul>
         </div>
     </header>
     
     <main>
         <section>
-            <div class="A DEFINIR">
-                <h1>Domine o conhecimento por meio de flashcards</h1>
-                <p>Os vestibulares e concursos públicos têm abarcado um conteúdo cada vez maior e, com o atual método educacional, principalmente os famosos cursinhos, é quase impossível revisar tudo de maneira concisa e eficiente.Diante disso, apresentamos o método de estudo ativo baseado em flashcards, uma abordagem comprovada para impulsionar o aprendizado de maneira rápida e eficaz. Neste artigo, abordaremos por que essa ferramenta é tão útil e valiosa na sua caminhada a fim de consolidar o conhecimento. Prepare-se para uma jornada de estudos mais sólida! </p>
+            <div>
+                <h1 class="principal">Domine o conhecimento por meio de flashcards</h1>
+                <p>Os vestibulares e concursos públicos têm abarcado um conteúdo cada vez maior e, com o atual método educacional, principalmente os famosos cursinhos, é quase impossível revisar tudo de maneira concisa e eficiente. Diante disso, apresentamos o método de estudo ativo baseado em flashcards, uma abordagem comprovada para impulsionar o aprendizado de maneira rápida e eficaz. Neste artigo, abordaremos por que essa ferramenta é tão útil e valiosa na sua caminhada a fim de consolidar o conhecimento. Prepare-se para uma jornada de estudos mais sólida! </p>
             </div> 
         </section>
 
-        <section class="section-conteudo">
-            <div class="conteudo-escrito">
-                <h2>Por que flashcards são eficientes</h2>
-                <ul>
-                    <li>Agilidade nas suas revisões</li>
-                    <li>Objetividade nos assuntos abordados</li>
-                    <li>Você estará testando seu conhecimento constantemente</li>
-                </ul>
-            </div>
-            <div class="imagem">
-                <img src="imagens/ficha-pequeno.jpg" alt="">
-            </div>
-        </section>
-
         <section>
-            <div class="conteudo-escrito">
-                <h2>Como utilizar os flashcards</h2>
+            <div>
+                <h2 class="principal">Por que flashcards são eficientes</h2>
                 <ul>
-                    <li>Você pode aliar textos verbais com imagens;</li>
-                    <li>Escreva os enunciados de leis fa física, por exemplo;</li>
-                    <li>Escreva qualquer fórmula de modo a fixá-la com maior agilidade;</li>
+                    <li>Agilidade nas suas revisões.</li>
+                    <li>Objetividade nos assuntos abordados.</li>
+                    <li>Você estará testando seu conhecimento constantemente.</li>
                 </ul>
             </div>
             <div class="imagem">
@@ -83,12 +68,26 @@
         </section>
 
         <section>
-            <div class="conteudo-escrito">
-                <h2>Dicas de como usar</h2>
+            <div>
+                <h2 class="principal">Como utilizar os flashcards</h2>
+                <ul>
+                    <li>Você pode aliar textos verbais com imagens.</li>
+                    <li>Escreva os enunciados de leis fa física, por exemplo.</li>
+                    <li>Escreva qualquer fórmula de modo a fixá-la com maior agilidade.</li>
+                </ul>
+            </div>
+            <div class="imagem">
+                <img src="" alt="">
+            </div>
+        </section>
+
+        <section>
+            <div>
+                <h2 class="principal">Dicas de como usar</h2>
                     <ul>
-                        <li>Seja objetivo em suas anotações, de modo a poupar tempo focar nos tópicos em que você tem mais dificuldade;</li>
-                        <li>Divida um conteúdo difícil em vários tópicos, de modo a se aprofundar progressivamente;</li>
-                        <li>No caso de perguntas, coloque em suas resposas aquilo que você já errou anteriormente ou sabe que tem dificuldade;</li>
+                        <li>Seja objetivo em suas anotações, de modo a poupar tempo focar nos tópicos em que você tem mais dificuldade.</li>
+                        <li>Divida um conteúdo difícil em vários tópicos, de modo a se aprofundar progressivamente.</li>
+                        <li>No caso de perguntas, coloque em suas resposas aquilo que você já errou anteriormente ou sabe que tem dificuldade.</li>
                     </ul>
             </div>
             <div class="imagem">
@@ -97,16 +96,35 @@
         </section>
 
         <section>
-            <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa earum iure, delectus, rem ea corrupti dicta exercitationem, distinctio dolorum soluta dolores quas est. Qui, rem magni quibusdam quidem dolores officiis. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam error quo assumenda quos, veritatis veniam alias provident necessitatibus. Minus veritatis perspiciatis eligendi optio quos, debitis cumque ex asperiores esse vel. Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit ab saepe adipisci ullam accusamus iusto magni atque dolore asperiores quasi quo corrupti quaerat quas vitae, quibusdam exercitationem ducimus dolores porro.</p>
-            <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa earum iure, delectus, rem ea corrupti dicta exercitationem, distinctio dolorum soluta dolores quas est. Qui, rem magni quibusdam quidem dolores officiis. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam error quo assumenda quos, veritatis veniam alias provident necessitatibus. Minus veritatis perspiciatis eligendi optio quos, debitis cumque ex asperiores esse vel. Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit ab saepe adipisci ullam accusamus iusto magni atque dolore asperiores quasi quo corrupti quaerat quas vitae, quibusdam exercitationem ducimus dolores porro.</p>
-            <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa earum iure, delectus, rem ea corrupti dicta exercitationem, distinctio dolorum soluta dolores quas est. Qui, rem magni quibusdam quidem dolores officiis. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam error quo assumenda quos, veritatis veniam alias provident necessitatibus. Minus veritatis perspiciatis eligendi optio quos, debitis cumque ex asperiores esse vel. Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit ab saepe adipisci ullam accusamus iusto magni atque dolore asperiores quasi quo corrupti quaerat quas vitae, quibusdam exercitationem ducimus dolores porro.</p>
-            <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa earum iure, delectus, rem ea corrupti dicta exercitationem, distinctio dolorum soluta dolores quas est. Qui, rem magni quibusdam quidem dolores officiis. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam error quo assumenda quos, veritatis veniam alias provident necessitatibus. Minus veritatis perspiciatis eligendi optio quos, debitis cumque ex asperiores esse vel. Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit ab saepe adipisci ullam accusamus iusto magni atque dolore asperiores quasi quo corrupti quaerat quas vitae, quibusdam exercitationem ducimus dolores porro.</p>
-            <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa earum iure, delectus, rem ea corrupti dicta exercitationem, distinctio dolorum soluta dolores quas est. Qui, rem magni quibusdam quidem dolores officiis. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam error quo assumenda quos, veritatis veniam alias provident necessitatibus. Minus veritatis perspiciatis eligendi optio quos, debitis cumque ex asperiores esse vel. Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit ab saepe adipisci ullam accusamus iusto magni atque dolore asperiores quasi quo corrupti quaerat quas vitae, quibusdam exercitationem ducimus dolores porro.</p>
+            <div>
+                <h2 class="principal">Título</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam ad, illo officia aperiam tenetur minima quasi quia cumque ea ipsa excepturi repellendus dolorum? Ducimus dicta deleniti quod omnis amet veniam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus exercitationem eius sit, temporibus ratione in veritatis odit similique iusto earum eos possimus incidunt ut aliquid sint, repellat nemo at corrupti.</p>
+            </div>
         </section>
     </main>
 
+    <footer>
+        <section class="rodapé">
+            <h4>Logo</h4>
+            <ul>
+               <li><a href="#">Instagram</a></li> 
+               <li><a href="#">Twitter</a></li> 
+               <li><a href="#">Linkedin</a></li> 
+            </ul>
+        </section>
+
+    </footer>
 
     <script>
+
+        function mudouTamanho() {
+            if (window.innerWidth >= 768) {
+                itens.style.display = 'block'
+            } else {
+                itens.style.display = 'none'
+            }
+        }
+
         function menuShow() {
             let menuMobile = document.querySelector('.mobile-menu')
             if (menuMobile.classList.contains('open')) {

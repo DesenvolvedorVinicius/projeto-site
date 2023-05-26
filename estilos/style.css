@@ -64,6 +64,10 @@ header {
     /*margin: auto;*/
 }
 
+div.botoes > div.cadastro-button {
+    display: none;
+}
+
 .login-button button {
     border: none;
     background-color: rgb(51, 51, 51);
@@ -133,14 +137,33 @@ header {
     margin: 0px 10px;
 }
 
-.mobile-menu .nav-item-ultimo {
+.mobile-menu .nav-ultimo-item {
     display: block;
     height: 40px;
-    padding: 8px 0px;
+    padding: 5px 0px;
     border-top: 1px solid rgba(0, 0, 0, 0.507);
     border-bottom: 1px solid rgba(0, 0, 0, 0.507);
     margin: 0px 10px;
 }
+
+.cadastro-button button{
+    display: block;
+    width: 100%;
+    margin: auto;
+    border: none;
+    background-color: rgb(51, 51, 51);
+    padding: 3px 9px;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    
+}
+
+.cadastro-button button a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 15px;
+}
+
 
 .open {
     display: block;

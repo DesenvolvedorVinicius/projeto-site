@@ -22,6 +22,28 @@
         transition: .3s;
     }
 
+    div.botoes > div.cadastro-button {
+        display: block;
+    }
+
+    .cadastro-button button {
+        border: none;
+        background-color: rgb(51, 51, 51);
+        padding: 6px 9px;
+        box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
+        border-radius: 5px;
+    }
+
+    .login-button button a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 15px;
+    }
+
+    .cadastro-button button:hover {
+        background-color: rgba(59, 59, 59, 0.822);
+    }
+
     .mobile-menu-icon {
     display: none;
 }

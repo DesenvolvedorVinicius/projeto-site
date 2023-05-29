@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Site - Fazer login</title>
-    <link rel="stylesheet" href="../estilos/style-login.css">
+    <title>Cadastre-se</title>
+    <link rel="stylesheet" href="../estilos/style-cadastro.css">
 </head>
 <body>
     <header>
@@ -16,19 +16,24 @@
 
     <main>
         <div class="primeiro">
-            <h2>Fazer login</h2>
+            <h2>Inscreva-se</h2>
             <div class="botoes-continuar">
                 <button><a href="#">Continuar com o Google</a></button>
                 <button><a href="#">Continuar com a Apple</a></button>
             </div> 
         </div> 
-       
-        <div class="login-manual">
-            
+
+        <div class="cadastro-manual">
             <div class="campo">
-                <label for="iusuario">Usuário</label>
+                <label for="inome">Nome</label>
                 <br>
-                <input type="email" name="usuario" id="iusuario" autocomplete="email">
+                <input type="email" name="nome" id="inome" autocomplete="email">
+                
+            </div>
+            <div class="campo">
+                <label for="iemail">E-mail</label>
+                <br>
+                <input type="email" name="email" id="iemail" autocomplete="email">
                 
             </div>
             <div class="campo">
@@ -37,11 +42,17 @@
                 <input type="password" name="senha" id="isenha" autocomplete="current-password">
                 
             </div>
-            <button class="botao-login">Entrar</button>
-            <button class="esqueci-senha"><a href="#">Esqueci minha senha</a></button>
+            <!-- Configurar o label -->
+            <div class="campo">
+                <label for="isenha">Confirme sua senha</label>
+                <br>
+                <input type="password" name="senha" id="isenha" autocomplete="current-password">
+                
+            </div>
+            <button class="botao-inscrever">Inscrever-se</button>
+            
         </div>
 
     </main>
-
 </body>
 </html>

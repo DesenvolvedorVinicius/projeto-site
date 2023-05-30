@@ -59,6 +59,10 @@ main {
     font-size: 1em;
 }
 
+.botoes-continuar button:hover {
+    background-color: rgb(83, 83, 83);
+}
+
 .cadastro-manual {
     display: flex;
     flex-direction: column;
@@ -84,6 +88,16 @@ main {
     padding: 5px;
     border: none;
     border-radius: 8px;
+}
+
+.link-inscrever {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1em;
+}
+
+.botao-inscrever:hover {
+    background-color: rgb(83, 83, 83);
 }
 
 @media screen and (min-width: 768px) {

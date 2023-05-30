@@ -4,42 +4,54 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Teste iframe</title>
     <style>
-        body {
-            font-family: gotha;
-        }
-
-        nav {
-        background-color: #f1f1f1;
+        #caderno {
+        border: 1px solid #ccc;
         padding: 10px;
         }
 
-        nav a {
-        display: inline-block;
-        margin-right: 10px;
-        color: #333;
-        text-decoration: none;
+        #anotacoes {
+        width: 100%;
+        height: 200px;
+        resize: vertical;
+        margin-bottom: 10px;
         }
 
-        nav i {
-        margin-left: 5px;
-        }
-
-        nav a:hover {
-        color: #ff0000;
+        #salvar {
+        background-color: #4CAF50;
+        color: #fff;
+        padding: 8px 16px;
+        border: none;
+        cursor: pointer;
         }
 
     </style>
-    
 </head>
+
 <body>
-    <nav>
-        <a href="#">Início <i class="fas fa-home"></i></a>
-        <a href="#">Produtos <i class="fas fa-box"></i></a>
-        <a href="#">Sobre <i class="fas fa-info-circle"></i></a>
-        <a href="#">Contato <i class="fas fa-envelope"></i></a>
-      </nav>
+    <div id="caderno">
+        <textarea id="anotacoes" placeholder="Faça suas anotações aqui..."></textarea>
+        <button id="salvar">Salvar</button>
+      </div>
       
+      <script>
+        // Acessando elementos do HTML
+        const textarea = document.getElementById('anotacoes');
+        const botaoSalvar = document.getElementById('salvar');
+
+        // Evento de clique no botão "Salvar"
+        botaoSalvar.addEventListener('click', function () {
+        // Obtendo o conteúdo do textarea
+        const conteudo = textarea.value;
+
+        // Salvar o conteúdo nas contas dos usuários (requisição AJAX, API, banco de dados, etc.)
+
+        // Exemplo de mensagem de sucesso
+        alert('Anotações salvas com sucesso!');
+        });
+
+      </script>
 </body>
+
 </html>

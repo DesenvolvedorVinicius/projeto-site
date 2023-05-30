@@ -5,24 +5,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
     <link rel="stylesheet" href="../estilos/style-home.css">
 </head>
 <body>
     <header>
-        <nav>
-            <div class="nav-left">
+        <nav class="nav-bar">
+            <div class="botoes">
+                <div class="mobile-menu-icon">
+                    <button onclick="menuShow()"><span class="material-icons">menu</span></button>
+                </div>
+            </div>
+            <div class="nav-right">
                 <div class="logo">
                     <h1>Logo</h1>
                 </div>
                 <div class="nav-list">
                     <ul>
-                        <li class="nav-item"><a href="#" class="nav-link">Sobre nós</a></li>
-                        <li class="nav-item"><a href="#" class="nav-link">Serviços</a></li>
-                        <li class="nav-item"><a href="#" class="nav-link">Contato</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link">Exemplo 1</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link">Exemplo 2</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
+        <div class="mobile-menu">
+            <ul>
+                <li class="nav-item"><a href="#" class="nav-link">Sobre nós</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Serviços</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Contato</a></li>
+                <li class="nav-ultimo-item"><div  class="cadastro-button"><button><a href="paginas/cadastro.html">Inscrever-se</a></button></div></li>
+            </ul>
+        </div>
     </header>
 
     <main>

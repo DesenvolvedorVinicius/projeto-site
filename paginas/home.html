@@ -11,19 +11,24 @@
 <body>
     <header>
         <nav class="nav-bar">
-            <div class="botoes">
+            <div class="nav-left">
                 <div class="mobile-menu-icon">
                     <button onclick="menuShow()"><span class="material-icons">menu</span></button>
                 </div>
-            </div>
-            <div class="nav-right">
                 <div class="logo">
                     <h1>Logo</h1>
                 </div>
+            </div>
+            
+            <div class="nav-right-mobile">
+                <div class="botao-adicionar"><button onclick="adicionarShow()">Adicionar</button></div>
+            </div>
+
+            <div class="nav-right">
                 <div class="nav-list">
                     <ul>
                         <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
-                        <li class="nav-item"><a href="#" class="nav-link">Exemplo 1</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link">Biblioteca</a></li>
                         <li class="nav-item"><a href="#" class="nav-link">Exemplo 2</a></li>
                     </ul>
                 </div>
@@ -31,12 +36,29 @@
         </nav>
         <div class="mobile-menu">
             <ul>
-                <li class="nav-item"><a href="#" class="nav-link">Sobre nós</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">Serviços</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">Contato</a></li>
-                <li class="nav-ultimo-item"><div  class="cadastro-button"><button><a href="paginas/cadastro.html">Inscrever-se</a></button></div></li>
+                <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Biblioteca</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Exemplo 2</a></li>
             </ul>
+            <div class="mobile-menu-bottom">
+                <ul>
+                    <li class="bottom-list"><a href="#" class="bottom-list-link">Perfil/e-mail</a></li>
+                    <li class="bottom-list"><a href="#" class="bottom-list-link">Perfil</a></li>
+                    <li class="last-bottom-list"><a href="#" class="bottom-list-link">Configurações</a></li>
+                    <li  class="botao-sair"><button>Sair</button></li>
+                </ul>
+            </div>
         </div>
+
+        <div class="mobile-menu-adicionar">
+            <ul>
+                <li class="adicionar-item"><a href="#" class="adicionar-link">Pasta</a></li>
+                <li class="adicionar-item"><a href="#" class="adicionar-link">Flashcard</a></li>
+                <li class="adicionar-item"><a href="#" class="adicionar-link">Anotação</a></li>
+            </ul>
+            <!-- A tag não seria a mais correta, certo ?-->
+        </div>
+
     </header>
 
     <main>
@@ -46,5 +68,28 @@
     <footer>
 
     </footer>
+
+    <script>
+        function menuShow() {
+            let menuMobile = document.querySelector('.mobile-menu')
+            if (menuMobile.classList.contains('open')) {
+                menuMobile.classList.remove('open');
+            } else {
+                menuMobile.classList.add('open')
+            }
+        }
+
+        function adicionarShow() {
+            let menuMobile = document.querySelector('.mobile-menu-adicionar');
+
+            
+            if (menuMobile.style.display === 'block') {
+                menuMobile.style.display = 'none'; 
+            } else {
+                menuMobile.style.display = 'block'; 
+            }
+            }
+        
+    </script>
 </body>
 </html>

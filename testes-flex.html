@@ -8,170 +8,56 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
 
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap');
-
-        * {
-            margin: 0px;
-            padding: 0px;
-            font-family: 'Nanum Gothic', sans-serif;
-        }
-        
-        header {
-            background: linear-gradient( to right, #e2d4c5, #CCAB92);
-            
-        }
-
-        .nav-bar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            
-            padding: 10px 20px; 
-        }
-
-        .nav-left {
-            display: flex;
-            align-items: center;
-            gap: 25px;
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-            font-size: 13px;
-        }
-        
-        .nav-link {
-            text-decoration: none;
-            font-size: 17px;
-            color: #fff;
-        }
-
-        .login-button button {
-            border: none;
-            background-color: #0187a7;
-            padding: 6px 9px;
-            box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
-            border-radius: 5px;
-        }
-
-        .login-button button a {
-            text-decoration: none;
-            color: #fff;
-            font-size: 15px;
-        }
-
-        .mobile-menu-icon {
-            display: none;
-        }
-    
-        .mobile-menu {
+        .menu {
             display: none;
         }
 
-        .nav-list {
-            display: none;
-        }
-
-        .botoes {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-        
-        .mobile-menu-icon {
-                display: block;
-            }
-
-        .mobile-menu-icon button {
-                background-color: transparent;
-                border: none;
-                cursor: pointer;
-        }
-        
-        .mobile-menu ul { 
-            display: flex;
-            flex-direction: column;
-            text-align: center;
-        }
-        
-        .mobile-menu .nav-item {
+        .menu.active {
             display: block;
-            padding: .8rem 0rem;
-            border: 1px solid rgba(0, 0, 0, 0.507);
-            
         }
 
-        .open {
-                display: block;
-        }
-
-        @media screen and (min-width: 720px) {
-            .nav-list {
-                display: flex;
-                justify-content: center;
-            }
-
-            .nav-list ul {
-                list-style: none;
-                display: flex;
-                justify-content: center;
-            }
-
-            .nav-item {
-                margin: 0px 15px;
-            }
-
-            .mobile-menu-icon {
+        .hidden {
             display: none;
         }
-        }
+
     </style>
 </head>
 <body>
     <header>
-        <nav class="nav-bar">
-            <div class="nav-left">
-                <div class="logo">
-                    <h1>Logo</h1>
-                </div>
-                <div class="nav-list">
-                    <ul>
-                        <li class="nav-item"><a href="#" class="nav-link">Sobre nós</a></li>
-                        <li class="nav-item"><a href="#" class="nav-link">Serviços</a></li>
-                        <li class="nav-item"><a href="#" class="nav-link">Contato</a></li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="botoes">
-                <div class="login-button">
-                    <button><a href="#">Entrar</a></button>
-                </div>
-                <div class="mobile-menu-icon">
-                    <button onclick="menuShow()"><span class="material-icons">menu</span></button>
-                </div>
-            </div>
-        </nav>
-
-        <div class="mobile-menu">
-            <ul>
-                <li class="nav-item"><a href="#" class="nav-link">Sobre nós</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">Serviços</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">Contato</a></li>
-            </ul>
-        </div>
+        <button class="menu-toggle" onclick="toggleMenu('menu1')">Menu 1</button>
+        <button class="menu-toggle" onclick="toggleMenu('menu2')">Menu 2</button>
     </header>
-
+      
+    <nav id="menu1" class="menu">
+        <div>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima ipsa cumque consequuntur officiis sint quae praesentium, velit minus accusantium repellat dignissimos voluptas, non accusamus quaerat? Doloremque explicabo consequuntur tempora itaque!
+            </p>
+        </div>
+    </nav>
+      
+    <nav id="menu2" class="menu">
+        <div>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam amet fugiat et enim ducimus velit incidunt, modi, eius veritatis commodi autem voluptate animi repellat ea officia quis? Saepe, voluptates quis? Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit nulla nostrum labore amet aperiam. Accusamus magnam culpa itaque dicta, quia facere sit temporibus quibusdam molestias omnis voluptatem amet expedita et.
+            </p>
+        </div>
+    </nav>
+      
     <script>
-        function menuShow() {
-            let menuMobile = document.querySelector('.mobile-menu')
-            if (menuMobile.classList.contains('open')) {
-                menuMobile.classList.remove('open');
-            } else {
-                menuMobile.classList.add('open')
+        function toggleMenu(menuId) {
+            var menu = document.getElementById(menuId);
+            var menuToggle = document.getElementsByClassName("menu-toggle");
+
+            menu.classList.toggle("active");
+
+            for (var i = 0; i < menuToggle.length; i++) {
+                if (menuToggle[i].getAttribute("onclick") !== event.target.getAttribute("onclick")) {
+                menuToggle[i].classList.toggle("hidden");
+                }
             }
         }
+
     </script>
 </body>
 </html>

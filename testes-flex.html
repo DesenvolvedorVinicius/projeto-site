@@ -8,11 +8,19 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
 
     <style>
-        .menu {
+        .mobile-menu {
             display: none;
         }
 
-        .menu.active {
+        .mobile-menu.active {
+            display: block;
+        }
+
+        .mobile-menu-adicionar {
+            display: none;
+        }
+
+        .mobile-menu-adicionar.active {
             display: block;
         }
 
@@ -20,34 +28,38 @@
             display: none;
         }
 
+
     </style>
 </head>
 <body>
+    
     <header>
-        <button class="menu-toggle" onclick="toggleMenu('menu1')">Menu 1</button>
-        <button class="menu-toggle" onclick="toggleMenu('menu2')">Menu 2</button>
+        <button class="mobile-menu-toggle" onclick="toggleMenu('mobile-menu')">Menu 1</button>
+        <button class="mobile-menu-toggle" onclick="toggleMenu('mobile-menu-adicionar')">Menu 2</button>
     </header>
       
-    <nav id="menu1" class="menu">
+    <nav id="mobile-menu" class="mobile-menu">
         <div>
             <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima ipsa cumque consequuntur officiis sint quae praesentium, velit minus accusantium repellat dignissimos voluptas, non accusamus quaerat? Doloremque explicabo consequuntur tempora itaque!
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit deserunt eos, recusandae cumque voluptate accusamus velit numquam. Vitae adipisci aut iusto hic quos consequatur at, mollitia officiis delectus id ab.
+            </p>
+        </div>
+    </nav>
+    
+    <nav id="mobile-menu-adicionar" class="mobile-menu-adicionar">
+        <div>
+            <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit deserunt eos, recusandae cumque voluptate accusamus velit numquam. Vitae adipisci aut iusto hic quos consequatur at, mollitia officiis delectus id ab.
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsum dolor omnis consequatur aspernatur eligendi repellendus inventore molestias ex a aliquid, doloremque necessitatibus non saepe iure possimus totam dolores quibusdam. Modi.
             </p>
         </div>
     </nav>
       
-    <nav id="menu2" class="menu">
-        <div>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam amet fugiat et enim ducimus velit incidunt, modi, eius veritatis commodi autem voluptate animi repellat ea officia quis? Saepe, voluptates quis? Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit nulla nostrum labore amet aperiam. Accusamus magnam culpa itaque dicta, quia facere sit temporibus quibusdam molestias omnis voluptatem amet expedita et.
-            </p>
-        </div>
-    </nav>
-      
+
     <script>
         function toggleMenu(menuId) {
             var menu = document.getElementById(menuId);
-            var menuToggle = document.getElementsByClassName("menu-toggle");
+            var menuToggle = document.getElementsByClassName("mobile-menu-toggle");
 
             menu.classList.toggle("active");
 

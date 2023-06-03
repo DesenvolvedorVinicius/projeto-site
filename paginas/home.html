@@ -9,48 +9,49 @@
     <link rel="stylesheet" href="../estilos/style-home.css">
 </head>
 <body>
+
     <header>
         <nav class="nav-bar">
             <div class="nav-left">
                 <div class="mobile-menu-icon">
-                    <button onclick="menuShow()"><span class="material-icons">menu</span></button>
+                    <button class="mobile-menu-toggle" onclick="toggleMenu('mobile-menu')"><span class="material-icons">menu</span></button>
                 </div>
                 <div class="logo">
                     <h1>Logo</h1>
                 </div>
             </div>
-            
-            <div class="nav-right-mobile">
-                <div class="botao-adicionar"><button onclick="adicionarShow()">Adicionar</button></div>
-            </div>
+
+            <button id="botao-adicionar" class="mobile-menu-toggle" onclick="toggleMenu('mobile-menu-adicionar')">Adicionar</button>
 
             <div class="nav-right">
                 <div class="nav-list">
                     <ul>
                         <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
                         <li class="nav-item"><a href="#" class="nav-link">Biblioteca</a></li>
-                        <li class="nav-item"><a href="#" class="nav-link">Exemplo 2</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link">Estatísticas</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
-        <div class="mobile-menu">
-            <ul>
-                <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">Biblioteca</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">Exemplo 2</a></li>
-            </ul>
-            <div class="mobile-menu-bottom">
+        <div id="mobile-menu" class="mobile-menu">
+            <div>
                 <ul>
-                    <li class="bottom-list"><a href="#" class="bottom-list-link">Perfil/e-mail</a></li>
-                    <li class="bottom-list"><a href="#" class="bottom-list-link">Perfil</a></li>
-                    <li class="last-bottom-list"><a href="#" class="bottom-list-link">Configurações</a></li>
-                    <li  class="botao-sair"><button>Sair</button></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Biblioteca</a></li>
+                    <li class="nav-last-item"><a href="#" class="nav-link">Estatísticas</a></li>
                 </ul>
+                <div class="mobile-menu-bottom">
+                    <ul>
+                        <li class="bottom-list"><a href="#" class="bottom-list-link">Perfil/e-mail</a></li>
+                        <li class="bottom-list"><a href="#" class="bottom-list-link">Perfil</a></li>
+                        <li class="last-bottom-list"><a href="#" class="bottom-list-link">Configurações</a></li>
+                    </ul>
+                </div>
             </div>
+            <div class="botao-sair"><button>Sair</button></div>
         </div>
 
-        <div class="mobile-menu-adicionar">
+        <div id="mobile-menu-adicionar" class="mobile-menu-adicionar">
             <ul>
                 <li class="adicionar-item"><a href="#" class="adicionar-link">Pasta</a></li>
                 <li class="adicionar-item"><a href="#" class="adicionar-link">Flashcard</a></li>
@@ -58,10 +59,30 @@
             </ul>
             <!-- A tag não seria a mais correta, certo ?-->
         </div>
-
     </header>
 
     <main>
+
+        <section class="recente">
+            <h3>Recente</h3>
+            <div class="box-recente-1"></div>
+            <div class="box-recente-2"></div>
+        </section>
+
+        <section class="main-biblioteca">
+            <h3>Principais bibliotecas</h3>
+            <div class="box-main-biblioteca"></div>
+        </section>
+
+        <section class="ultimas-anotacoes">
+            <h3>Últimas anotações</h3>
+            <div class="box-ultimas-anotacoes"></div>
+        </section>
+
+        <section>
+            <h3>Frequência</h3>
+            <div></div>
+        </section>
 
     </main>
 
@@ -70,25 +91,18 @@
     </footer>
 
     <script>
-        function menuShow() {
-            let menuMobile = document.querySelector('.mobile-menu')
-            if (menuMobile.classList.contains('open')) {
-                menuMobile.classList.remove('open');
-            } else {
-                menuMobile.classList.add('open')
-            }
-        }
+       function toggleMenu(menuId) {
+            var menu = document.getElementById(menuId);
+            var menuToggle = document.getElementsByClassName("mobile-menu-toggle");
 
-        function adicionarShow() {
-            let menuMobile = document.querySelector('.mobile-menu-adicionar');
+            menu.classList.toggle("active");
 
-            
-            if (menuMobile.style.display === 'block') {
-                menuMobile.style.display = 'none'; 
-            } else {
-                menuMobile.style.display = 'block'; 
+            for (var i = 0; i < menuToggle.length; i++) {
+                if (menuToggle[i].getAttribute("onclick") !== event.target.getAttribute("onclick")) {
+                menuToggle[i].classList.toggle("hidden");
+                }
             }
-            }
+        } 
         
     </script>
 </body>

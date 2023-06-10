@@ -1,13 +1,12 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Teste Menu Responsivo</title>
-    <link rel="stylesheet" href="testes.css">
+    <title>Biblioteca</title>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    
+    <link rel="stylesheet" href="../estilos/style-biblioteca.css">
+    <!--<link rel="stylesheet" href="../estilos/media-query-biblioteca.css">-->
 </head>
 <body>
     <header>
@@ -76,7 +75,7 @@
             <li>
                 <div class="profile-details">
                     <div class="profile-content">
-                        <img src="imagens/imagem.jpeg" alt="Profile">
+                        <img src="../imagens/imagem.jpeg" alt="Profile">
                     </div>
                     <div class="name-email">
                         <div class="profile_name">Vinícius Pereira</div>
@@ -104,59 +103,47 @@
         </ul>
     </div>
     <main>
-
-        <section class="recente">
-            <h3>Recentes</h3>
-            <div class="box-recente">
-                <div class="box-recente-1"></div>
-                <div class="box-recente-2"></div>
-                <div class="box-recente-3"></div>
+        <div class="account">
+            <div class="account-content">
+                <img src="../imagens/imagem.jpeg" alt="Profile">
             </div>
-        </section>
-
-        <section class="main-biblioteca">
-            <h3>Principais bibliotecas</h3>
-            <div class="box-main-biblioteca-1"></div>
-            <div class="box-main-biblioteca-2"></div>
-        </section>
-
-        <section class="ultimas-anotacoes">
-            <h3>Últimas anotações</h3>
-            <div class="box-ultimas-anotacoes"></div>
-        </section>
-
-        <section class="frequencia">
-            <h3>Frequência</h3>
-            <div class="box-frequencia"></div>
-        </section>
-
+            <div class="name-email">
+                <div class="profile_name">Vinícius Pereira</div>
+                <div class="email">viniciusmp0803@gmail.com</div>
+            </div>
+        </div>
+        <div class="add-pst">
+           <button>
+                <span class="add-pst_name">Adicionar pasta</span>
+                <i class='bx bx-chevron-down'></i>
+            </button>
+        </div>
     </main>
 
     <script>
-    let arrow = document.querySelectorAll(".arrow");
-    for (var i = 0; i < arrow.length; i++) {
-        arrow[i].addEventListener("click", (e)=>{
-        let arrowParent = e.target.parentElement.parentElement;
-        console.log(arrowParent);
-        arrowParent.classList.toggle("showMenu");
+        let arrow = document.querySelectorAll(".arrow");
+        for (var i = 0; i < arrow.length; i++) {
+            arrow[i].addEventListener("click", (e)=>{
+            let arrowParent = e.target.parentElement.parentElement;
+            console.log(arrowParent);
+            arrowParent.classList.toggle("showMenu");
+            });
+        }
+    
+        let sidebar = document.querySelector(".sidebar");
+        let sidebarBtn = document.querySelector(".bx-menu");
+        console.log(sidebarBtn);
+        sidebarBtn.addEventListener("click", ()=> {
+            sidebar.classList.toggle("close");
         });
-    }
-
-    let sidebar = document.querySelector(".sidebar");
-    let sidebarBtn = document.querySelector(".bx-menu");
-    console.log(sidebarBtn);
-    sidebarBtn.addEventListener("click", ()=> {
-        sidebar.classList.toggle("close");
-    });
-
-    let menuadd = document.querySelector(".menuadd");
-    let menuaddBtn = document.querySelector(".nav-right");
-    console.log(menuaddBtn);
-    menuaddBtn.addEventListener("click", ()=> {
-        menuadd.classList.toggle("close");
-    });
-
-    </script>
-
+    
+        let menuadd = document.querySelector(".menuadd");
+        let menuaddBtn = document.querySelector(".nav-right");
+        console.log(menuaddBtn);
+        menuaddBtn.addEventListener("click", ()=> {
+            menuadd.classList.toggle("close");
+        });
+    
+        </script>
 </body>
 </html>

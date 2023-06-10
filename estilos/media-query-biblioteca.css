@@ -1,0 +1,43 @@
+@charset "UTF-8";
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .sidebar {
+        width: 300px;
+    }
+
+    .sidebar .profile-details {
+        width: 300px;
+    }
+
+    .sidebar .log-out {
+        width: 300px;
+    }
+
+    main {
+        width: 80vw;
+        margin: auto;
+        /*border: 1px solid rgba(0, 0, 0, 0.199);*/
+        /*box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.404);*/
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .sidebar {
+        width: 300px;
+    }
+
+    .sidebar .profile-details {
+        width: 300px;
+    }
+
+    .sidebar .log-out {
+        width: 300px;
+    }
+
+    main {
+        width: 65vw;
+        margin: auto;
+        /*border: 1px solid rgba(0, 0, 0, 0.199);*/
+        /*box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.404);*/
+    }
+}

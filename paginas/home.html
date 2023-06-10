@@ -5,73 +5,119 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="../estilos/style-home.css">
+    <link rel="stylesheet" href="../estilos/media-query-home.css">
 </head>
 <body>
-
     <header>
-        <nav class="nav-bar">
+        <div class="navbar">
             <div class="nav-left">
-                <div class="mobile-menu-icon">
-                    <button class="mobile-menu-toggle" onclick="toggleMenu('mobile-menu')"><span class="material-icons">menu</span></button>
+                <div class="menu-icon">
+                    <i class='bx bx-menu'></i>
                 </div>
                 <div class="logo">
-                    <h1>Logo</h1>
+                    <span class="logo_name">Logo</span>
                 </div>
             </div>
-
-            <button id="botao-adicionar" class="mobile-menu-toggle" onclick="toggleMenu('mobile-menu-adicionar')">Adicionar</button>
-
             <div class="nav-right">
-                <div class="nav-list">
-                    <ul>
-                        <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
-                        <li class="nav-item"><a href="#" class="nav-link">Biblioteca</a></li>
-                        <li class="nav-item"><a href="#" class="nav-link">Estatísticas</a></li>
-                    </ul>
-                </div>
+                <div class="add"><span>Adicionar</span></div>
             </div>
-        </nav>
-        <div id="mobile-menu" class="mobile-menu">
-            <div>
-                <ul>
-                    <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">Biblioteca</a></li>
-                    <li class="nav-last-item"><a href="#" class="nav-link">Estatísticas</a></li>
-                </ul>
-                <div class="mobile-menu-bottom">
-                    <ul>
-                        <li class="bottom-list"><a href="#" class="bottom-list-link">Perfil/e-mail</a></li>
-                        <li class="bottom-list"><a href="#" class="bottom-list-link">Perfil</a></li>
-                        <li class="last-bottom-list"><a href="#" class="bottom-list-link">Configurações</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="botao-sair"><button>Sair</button></div>
-        </div>
-
-        <div id="mobile-menu-adicionar" class="mobile-menu-adicionar">
-            <ul>
-                <li class="adicionar-item"><a href="#" class="adicionar-link">Pasta</a></li>
-                <li class="adicionar-item"><a href="#" class="adicionar-link">Flashcard</a></li>
-                <li class="adicionar-item"><a href="#" class="adicionar-link">Anotação</a></li>
-            </ul>
-            <!-- A tag não seria a mais correta, certo ?-->
         </div>
     </header>
-
+    <div class="sidebar close">
+        <ul class="nav-links">
+            <li>
+                <a href="#">
+                    <i class='bx bx-home-alt-2'></i>
+                    <span class="link_name">Home</span>
+                </a>
+            </li>
+            <li>
+                <div class="icon-link">
+                    <a href="#">
+                        <i class='bx bx-book' ></i>
+                        <span class="link_name">Biblioteca</span>
+                    </a>
+                    <i class='bx bx-chevron-down arrow'></i>
+                </div>
+                <ul class="sub-menu">
+                    <li><a href="#">HTML & CSS</a></li>
+                    <li><a href="#">JavaScript</a></li>
+                    <li><a href="#">PHP & MySQL</a></li>
+                </ul>
+            </li>
+            <li>
+                <div class="icon-link">
+                    <a href="#">
+                        <i class='bx bx-line-chart' ></i>
+                        <span class="link_name">Estatísticas</span>
+                    </a>
+                    <i class='bx bx-chevron-down arrow'></i>
+                </div>
+                <ul class="sub-menu">
+                    <li><a href="#">HTML & CSS</a></li>
+                    <li><a href="#">JavaScript</a></li>
+                    <li><a href="#">PHP & MySQL</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-cog' ></i>
+                    <span class="link_name">Configurações</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-user'></i>
+                    <span class="link_name">Perfil</span>
+                </a>
+            </li>
+            <li>
+                <div class="profile-details">
+                    <div class="profile-content">
+                        <img src="../imagens/imagem.jpeg" alt="Profile">
+                    </div>
+                    <div class="name-email">
+                        <div class="profile_name">Vinícius Pereira</div>
+                        <div class="email">viniciusmp0803@gmail.com</div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="log-out">
+                    <button>
+                        <a href="#">
+                            <i class='bx bx-log-out'></i>
+                            <span class="log-out_name">Sair</span>
+                        </a>
+                    </button>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="menuadd close">
+        <ul class="sub-menu-add">
+            <li><a href="#">UI Face</a></li>
+            <li><a href="#">Pigmentes</a></li>
+            <li><a href="#">Box Icons</a></li>
+        </ul>
+    </div>
     <main>
 
         <section class="recente">
-            <h3>Recente</h3>
-            <div class="box-recente-1"></div>
-            <div class="box-recente-2"></div>
+            <h3>Recentes</h3>
+            <div class="box-recente">
+                <div class="box-recente-1"></div>
+                <div class="box-recente-2"></div>
+                <div class="box-recente-3"></div>
+            </div>
         </section>
 
         <section class="main-biblioteca">
             <h3>Principais bibliotecas</h3>
-            <div class="box-main-biblioteca"></div>
+            <div class="box-main-biblioteca-1"></div>
+            <div class="box-main-biblioteca-2"></div>
         </section>
 
         <section class="ultimas-anotacoes">
@@ -79,31 +125,38 @@
             <div class="box-ultimas-anotacoes"></div>
         </section>
 
-        <section>
+        <section class="frequencia">
             <h3>Frequência</h3>
-            <div></div>
+            <div class="box-frequencia"></div>
         </section>
 
     </main>
 
-    <footer>
-
-    </footer>
-
     <script>
-       function toggleMenu(menuId) {
-            var menu = document.getElementById(menuId);
-            var menuToggle = document.getElementsByClassName("mobile-menu-toggle");
+    let arrow = document.querySelectorAll(".arrow");
+    for (var i = 0; i < arrow.length; i++) {
+        arrow[i].addEventListener("click", (e)=>{
+        let arrowParent = e.target.parentElement.parentElement;
+        console.log(arrowParent);
+        arrowParent.classList.toggle("showMenu");
+        });
+    }
 
-            menu.classList.toggle("active");
+    let sidebar = document.querySelector(".sidebar");
+    let sidebarBtn = document.querySelector(".bx-menu");
+    console.log(sidebarBtn);
+    sidebarBtn.addEventListener("click", ()=> {
+        sidebar.classList.toggle("close");
+    });
 
-            for (var i = 0; i < menuToggle.length; i++) {
-                if (menuToggle[i].getAttribute("onclick") !== event.target.getAttribute("onclick")) {
-                menuToggle[i].classList.toggle("hidden");
-                }
-            }
-        } 
-        
+    let menuadd = document.querySelector(".menuadd");
+    let menuaddBtn = document.querySelector(".nav-right");
+    console.log(menuaddBtn);
+    menuaddBtn.addEventListener("click", ()=> {
+        menuadd.classList.toggle("close");
+    });
+
     </script>
+
 </body>
 </html>

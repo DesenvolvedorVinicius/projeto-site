@@ -234,7 +234,7 @@ body {
 }
 
 .menuadd {
-    position: absolute;
+    position: fixed;
     top: 50px;
     right:10px;
     z-index: auto;
@@ -304,6 +304,7 @@ main {
     display: flex;
     flex-direction: column;
     border: 1px solid #BFBFB8;
+    border-radius: 7px;
     box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.404);
     height: 150px;
 }
@@ -348,6 +349,7 @@ main {
     flex-direction: column;
     height: 75px;
     border: 1px solid #BFBFB8;
+    border-radius: 7px;
     box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.404);
     margin-top: 5px;
     margin-bottom: 15px;

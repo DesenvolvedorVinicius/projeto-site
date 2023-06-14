@@ -13,8 +13,16 @@ body {
     background-color: #F2F2F2;
 }
 
+:root {
+    --cornavbar: #4C5958;
+    --corsidebar:#8AA6A3;
+    --cortextsidebar: #fff;
+    --corlogout: #4C5958;
+    --corlistitens: #4C5958;
+}
+
 .navbar {
-    background: #8BA6AC;
+    background: var(--cornavbar);
     position: fixed;
     top: 0;
     left: 0;
@@ -38,11 +46,13 @@ body {
 .navbar .nav-left .bx-menu {
     font-size: 35px;
     cursor: pointer;
+    color:#FFF;
 }
 
 .navbar .nav-left .logo .logo_name {
     font-size: 25px;
     font-weight: 600;
+    color:#fff;
 }
 
 .navbar .nav-right {
@@ -53,7 +63,7 @@ body {
 
 .navbar .nav-right .add{
     border: none;
-    background: lightblue;
+    background: #F2F2F2;
     border-radius: 10px;
     padding: 3px;
 }
@@ -62,7 +72,7 @@ body {
     text-decoration: none;
     font-size: 16px;
     font-weight: 500;
-    color: #11101d;
+    color: #4C5958;
 }
 
 .sidebar {
@@ -71,8 +81,9 @@ body {
     left: 0;
     height: 100%;
     width: 100%;
-    background: #11101d;
+    background: var(--corsidebar);
     transition: all 0.5s ease;
+    z-index: 1;
 }
 
 .sidebar.close {
@@ -91,7 +102,7 @@ body {
 }
 
 .sidebar .nav-links li:hover {
-    background: #1d1b31;
+    background: #4C5958;
 }
 
 .sidebar .nav-links li .icon-link{
@@ -105,7 +116,7 @@ body {
     min-width: 78px;
     text-align: center;
     line-height: 55px;
-    color: #fff;
+    color: var(--cortextsidebar);
     font-size: 25px;
     transition: all 0.3s ease;
 }
@@ -123,13 +134,13 @@ body {
 .sidebar .nav-links li a .link_name {
     font-size: 20px;
     font-weight: 400;
-    color: #fff;
+    color: var(--cortextsidebar);
 }
 
 .sidebar .nav-links li .sub-menu {
     padding: 6px 6px 14px 80px;
     margin-top: -10px;
-    background-color: #1d1b31;
+    background-color: #4C5958;
     display: none;
 }
 
@@ -177,7 +188,7 @@ body {
 
 .sidebar .profile-details .profile_name,
 .sidebar .profile-details .email {
-    color: #fff;
+    color: var(--cortextsidebar);
     font-size: 13px;
     font-weight: 500;
     white-space: nowrap;
@@ -193,7 +204,7 @@ body {
     width: 100%;
     display: flex;
     align-items: center;
-    background: #1d1b31;
+    background: var(--corlogout);
     padding: 6px 0;
 }
 
@@ -212,7 +223,7 @@ body {
     text-decoration: none;
     font-size: 18px;
     font-weight: 500;
-    color: #fff;
+    color: var(--cortextsidebar);
 }
 
 .sidebar .log-out button a .bx-log-out {
@@ -226,7 +237,7 @@ body {
 }
 
 .menuadd {
-    position: absolute;
+    position: fixed;
     top: 50px;
     right:10px;
     z-index: auto;
@@ -239,7 +250,7 @@ body {
 
 .menuadd ul {
     list-style: none;
-    background-color: #1d1b31;
+    background-color: #4C5958;
     padding: 10px 20px;
     border-radius: 0px 0px 10px 10px;
     line-height: 25px;
@@ -259,78 +270,184 @@ body {
 main {
     z-index: -1;
     background: #F2F2F2;
-    border: 1px solid black;
+    /*border: 1px solid black;*/
 }
-
-main .account {
-    display: flex;
-    align-items: center;
-    padding: 6px 0;
-    margin: 65px 10px 0px 10px;
-    border: 1px solid black;
-}
-
-main .account .account-content {
-    display: flex;
-    align-items: center;
-}
-
-main .account img {
-    height: 50px;
-    width: 50px;
-    object-fit: cover;
-    border-radius: 16px;
-    margin: 0 14px 0 16px;
-    background: #1d1b31;
-}
-
-main .account .name-email {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-}
-
-main .account .name-email .profile_name {
-    font-size: 20px;
-    font-weight: 600;
-    white-space: nowrap;
-}
-
-main .account .name-email .email {
-    font-size: 15px;
-    font-weight: 500;
-    white-space: nowrap;
-}
-
-main .add-pst {
+/*
+main .search-pst {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 0px 10px 0px 21px;
-    padding: 5px;
+    margin: 65px 21px 0px 21px;
+    padding: 10px 0px;
+    border-bottom: 1px solid black;
 }
 
-main .add-pst button {
+main .search-pst button {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 5px 3px;
     background-color: red;
     border-radius: 5px;
+    margin-bottom: 5px;
+}
+*/
+
+.input-box {
+    display: flex;
+    align-items: center;
+    margin: 75px 0px 0px 21px;
+    padding-bottom: 15px;
+    
 }
 
-main .add-pst button .add-pst_name {
+.input-box input {
     display: flex;
-    justify-content: center;
     align-items: center;
-    font-size: 15px;
-    font-weight: 500;
+    height: 40px;
+    width: 185px;
+    border: none;
+    border-radius: 8px;
+    padding: 5px;
 }
 
-main .add-pst button i {
+
+input[type="text"]:focus {
+    border: 2px solid blue;
+  }
+  
+.input-box i {
     display: flex;
-    justify-content: center;
     align-items: center;
-    margin: 0px 0px 0px 10px;
+    color: #4C5958;
+    margin-left: -20px;
+    font-size: 17px;
+}
+
+::placeholder {
+    color: #4C5958;
     font-size: 15px;
+}
+
+.pst {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px 21px 10px 21px;
+}
+
+.pst .list-pst {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.pst .list-pst ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.pst .list-pst ul li {
+    display: flex;
+    flex-direction: column;
+    background: transparent;
+}
+
+.pst .list-pst ul li .pst-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 0px;
+    background-color: var(--corlistitens);
+    color: #fff;
+    width: 100%;
+    margin-bottom: 1px;
+}
+
+.pst .list-pst ul li .pst-title .pst_name {
+    text-align: center;
+    color: #fff;
+    font-size: 18px;
+    padding: 3px 5px;
+}
+
+/*.pst .list-pst ul li .pst-title .pst_name:hover*/
+
+.pst .list-pst ul li .pst-title i {
+    height: 20px;
+    width: 20px;
+    text-align: center;
+    margin-right: 5px;
+    color: #fff;
+    font-size: 18px;
+    transition: all 0.3s ease;
+}
+
+/*.pst .list-pst ul li .pst-title i JavaScript*/
+
+.pst .list-pst ul .sub-menu-content {
+    display: none;
+}
+
+.pst .list-pst .pst-content li.showMenu .sub-menu-content{
+    display: block;
+    margin: auto;
+    width:100%;
+    background: #fff;
+    padding: 10px;
+    border-radius: 0px;
+    margin-bottom: 1px;
+
+}
+
+.pst .list-pst .pst-content li.showMenu i.flecha{
+    transform: rotate(-180deg);
+}
+
+.pst .list-pst ul li .sub-menu-content a{
+    display: block;
+    text-decoration: none;
+    text-align: left;
+    color: var(--corlistitens);
+    font-size: 16px;
+    padding: 3px 5px;
+    border-bottom: 1px solid #4C5958
+}
+
+footer {
+    width: 100%;
+    
+}
+
+footer .profile-footer{
+    background-color: var(--cornavbar);
+    color: #fff;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 6px 0;
+    transition: all 0.5s ease;
+}
+
+footer .profile-footer .bottom-content {
+    display: flex;
+    align-items: center;
+}
+
+footer .profile-footer img {
+    height: 50px;
+    width: 50px;
+    object-fit: cover;
+    border-radius: 16px;
+    margin: 0 14px 0 16px;
+    background: #1d1b31;
 }

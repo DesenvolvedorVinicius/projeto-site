@@ -272,31 +272,18 @@ main {
     background: #F2F2F2;
     /*border: 1px solid black;*/
 }
-/*
-main .search-pst {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 65px 21px 0px 21px;
-    padding: 10px 0px;
-    border-bottom: 1px solid black;
-}
 
-main .search-pst button {
+.title {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 5px 3px;
-    background-color: red;
-    border-radius: 5px;
-    margin-bottom: 5px;
+    margin: 75px 0px 0px 21px;
+    color: var(--corlistitens)
 }
-*/
 
 .input-box {
     display: flex;
     align-items: center;
-    margin: 75px 0px 0px 21px;
+    margin: 15px 0px 0px 21px;
     padding-bottom: 15px;
     
 }
@@ -309,13 +296,14 @@ main .search-pst button {
     border: none;
     border-radius: 8px;
     padding: 5px;
+    outline: none;
+    border: 0;
 }
-
-
-input[type="text"]:focus {
-    border: 2px solid blue;
-  }
-  
+/*
+input:focus	{
+    border: 1px solid red;
+}
+*/
 .input-box i {
     display: flex;
     align-items: center;
@@ -378,7 +366,9 @@ input[type="text"]:focus {
     padding: 3px 5px;
 }
 
-/*.pst .list-pst ul li .pst-title .pst_name:hover*/
+.pst .list-pst ul li .pst-title .pst_name:hover {
+    color: #F2F2F2
+}
 
 .pst .list-pst ul li .pst-title i {
     height: 20px;
@@ -418,12 +408,15 @@ input[type="text"]:focus {
     color: var(--corlistitens);
     font-size: 16px;
     padding: 3px 5px;
-    border-bottom: 1px solid #4C5958
+    border-bottom: 1px solid #4C5958;
+}
+
+.pst .list-pst ul li .sub-menu-content a:hover {
+    font-weight: 500;
 }
 
 footer {
     width: 100%;
-    
 }
 
 footer .profile-footer{

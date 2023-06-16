@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastre-se | Teste</title>
+    <link rel="stylesheet" href="estilos/style-cadastro-teste.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="container">
+        <div class="title">Inscreva-se</div>
+        <form action="home.html">
+            <div class="field email-field">
+                <div class="input-field">
+                    <input type="email" name="" id="" placeholder="Coloque seu email" class="email">
+                </div>
+                <span class="error email-error">
+                    <i class='bx bx-error-circle error-icon'></i>
+                    <p class="error-text">Insira um email válido</p>
+                </span>
+            </div>
+            <div class="field create-password">
+                <div class="input-field">
+                    <input type="password" name="" id="" placeholder="Criar senha" class="password">
+                    <i class='bx bx-hide show-hide' ></i>
+                </div>
+                <span class="error password-error">
+                    <i class='bx bx-error-circle error-icon'></i>
+                    <p class="error-text">Por favor insira uma senha com pelo menos 8 caracteres com número, símbolo, letras maiúsculas e minúsculas.</p>
+                </span>
+            </div>
+            <div class="field confirm-password">
+                <div class="input-field">
+                    <input type="password" name="" id="" placeholder="Confirmar senha" class="cPassword">
+                    <i class='bx bx-hide show-hide' ></i>
+                </div>
+                <span class="error cPassword-error">
+                    <i class='bx bx-error-circle error-icon'></i>
+                    <p class="error-text">As senhas não coincidem</p>
+                </span>
+            </div>
+            <div class="input-field button">
+                <input type="submit" value="Inscrever-se">
+            </div>
+        </form>
+        <div class="box-login">
+            <span class="login">Já possui uma conta? Faça <a href="login-teste.html" class="login-link">Login</a></span>
+        </div>
+    </div>
+    <script>
+        const form = document.querySelector("form"),
+            emailField = form.querySelector(".email-field"),
+            emailInput = emailField.querySelector(".email"),
+            passField = form.querySelector(".create-password"),
+            passInput = passField.querySelector(".password"),
+            cPassField = form.querySelector(".confirm-password"),
+            cPassInput = cPassField.querySelector(".cPassword");
+
+        // Email validtion
+        function checkEmail(){
+            const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+            if (!emailInput.value.match(emailPattern)) {
+                return emailField.classList.add("invalid"); // adding invalid clas if email value do not matched
+            }
+            emailField.classList.remove("invalid"); //removing invalid class if email  value matched with emailPattern
+        }
+
+        //Hide and show password
+        const eyeIcons = document.querySelectorAll(".show-hide");
+
+        eyeIcons.forEach(eyeIcon => {
+            eyeIcon.addEventListener("click", () => {
+                const pInput = eyeIcon.parentElement.querySelector("input"); //getting parent element of eye icon and selecting the password input 
+                
+                if (pInput.type === "password") {
+                    eyeIcon.classList.replace("bx-hide", "bx-show");
+                    return (pInput.type = "text");
+                }
+                eyeIcon.classList.replace("bx-show", "bx-hide");
+                pInput.type = "password";
+            });
+        });
+
+        // Password validation
+        function createPass(){
+            const passPattern = 
+                /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+
+            if(!passInput.value.match(passPattern)){
+                return passField.classList.add("invalid"); //adding invalid class if password input value do not match with passPattern
+            }
+            passField.classList.remove("invalid"); //removing invalid class if password input value matched with passPattern
+        }
+
+        // Confirm Password validation  
+        function confirmPass(){
+            if(passInput.value !== cPassInput.value || cPassInput.value === "") {
+                return cPassField.classList.add("invalid");
+            }
+            cPassField.classList.remove("invalid");
+        }
+        
+
+
+        // Calling Funtion on Form Submit
+        form.addEventListener("submit", (e) => {
+            e.preventDefault(); //preventing form submitting
+            checkEmail();
+            createPass();
+            confirmPass()
+
+            //calling function on key up
+            emailInput.addEventListener("keyup", checkEmail);
+            passInput.addEventListener("keyup", createPass);
+            cPassInput.addEventListener("keyup", confirmPass);
+            
+            if (
+                !emailField.classList.contains("invalid") &&
+                !passField.classList.contains("invalid") &&
+                !cPassField.classList.contains("invalid") 
+            ) {
+                location.href = form.getAttribute("action");
+            }
+        });
+            
+    </script>
+</body>
+</html>

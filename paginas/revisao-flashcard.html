@@ -3,11 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flashcards</title>
+    <title>Revisar Flashcard | Página</title>
+    <link rel="stylesheet" href="estilos/revisao-flashcard.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="../estilos/style-biblioteca.css">
-    <link rel="stylesheet" href="../estilos/media-query-biblioteca.css">
-    <!--<link rel="stylesheet" href="../estilos/media-query-biblioteca.css">-->
 </head>
 <body>
     <header>
@@ -102,76 +100,22 @@
             <li><a href="#">Anotação</a></li>
         </ul>
     </div>
-    <main>
-        <div class="title">
-            <h1>Revisar flashcards</h1>
+    <div class="container">
+        <div class="box-title">
+            <span class="title">Matéria - subpasta</span>
         </div>
-        <div class="input-box">
-            <input type="text" name="" id="find" placeholder="Pesquisar flashcard" onkeyup="search()">
-            <label for="find"><i class='bx bx-search'></i></label>    
-        </div>
-        <div class="pst">
-            <div class="list-pst">
-                <ul class="pst-content">
-                    <li>
-                        <div class="pst-title">
-                            <div><span class="pst_name">Biologia</span></div>
-                            <i class='bx bx-chevron-down flecha'></i>
-                        </div>
-                        <ul class="sub-menu-content">
-                            <li><a href="#">Exemplo</a></li>
-                            <li><a href="#">Exemplo</a></li>
-                            <li><a href="#">Exemplo</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <div class="pst-title">
-                            <div><span class="pst_name">Matemática</span></div>
-                            <i class='bx bx-chevron-down flecha'></i>
-                        </div>
-                        <ul class="sub-menu-content">
-                            <li><a href="#">Exemplo</a></li>
-                            <li><a href="#">Exemplo</a></li>
-                            <li><a href="#">Exemplo</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <div class="pst-title">
-                            <div><span class="pst_name">Física</span></div>
-                            <i class='bx bx-chevron-down flecha'></i>
-                        </div>
-                        <ul class="sub-menu-content">
-                            <li><a href="#">Exemplo</a></li>
-                            <li><a href="#">Exemplo</a></li>
-                            <li><a href="#">Exemplo</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <div class="pst-title">
-                            <div><span class="pst_name">Química</span></div>
-                            <i class='bx bx-chevron-down flecha'></i>
-                        </div>
-                        <ul class="sub-menu-content">
-                            <li><a href="#">Exemplo</a></li>
-                            <li><a href="#">Exemplo</a></li>
-                            <li><a href="#">Exemplo</a></li>
-                        </ul>
-                    </li>
-                </ul>
+        <div class="content"> 
+            <div class="input-box">
+                <textarea name="" id="" cols="30" rows="10"></textarea>
+                <!-- Adicionar a função editar -->
+            </div>
+            <div class="controls">
+                <button><i class='bx bx-left-arrow-alt arrow-controls' ></i></button>
+                <button><i class='bx bx-right-arrow-alt arrow-controls' ></i></button>
+                <!-- Adicionar scrip que, para o primeiro flashcard, o botao prev esteja desabilitado : color: gray -->
             </div>
         </div>
-    </main>
-    <footer>
-        <div class="profile-footer">
-            <div class="bottom-content">
-                <img src="../imagens/imagem.jpeg" alt="Profile">
-            </div>
-            <div class="name-email">
-                <div class="profile_name">Vinícius Pereira</div>
-                <div class="email">viniciusmp0803@gmail.com</div>
-            </div>
-        </div>
-    </footer>
+    </div>
 
     <script>
         let arrow = document.querySelectorAll(".arrow");
@@ -205,32 +149,8 @@
             flechaParent.classList.toggle("showMenu");
             });
         }
-        
+    </script>
 
-    
 
-        function search() {
-            let filter = document.getElementById('find').value.toUpperCase();
-
-            let item = document.querySelectorAll('.pst-title');
-
-            let l = document.getElementsByTagName('span');
-
-            for(var i = 0;i<=l.length;i++){
-                let a=item[i].getElementsByTagName('span')[0];
-
-                let value=a.innerHTML || a.innerText || a.textContent;
-
-                if(value.toUpperCase().indexOf(filter) > -1) {
-                    item[i].style.display="";
-                }
-                else
-                {
-                    item[i].style.display="none";
-                }
-            }
-        }
-
-        </script>
 </body>
 </html>

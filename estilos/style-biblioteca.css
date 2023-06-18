@@ -87,7 +87,8 @@ body {
 }
 
 .sidebar.close {
-    display: none;
+    width: 0;
+    pointer-events: none;
 }
 
 .sidebar .nav-links {
@@ -208,6 +209,11 @@ body {
     padding: 6px 0;
 }
 
+.sidebar.close .log-out {
+    opacity: 0;
+    pointer-events: none;
+}
+
 .sidebar .log-out button {
     background: transparent;
     margin-left: 20px; 
@@ -297,7 +303,7 @@ main {
     border-radius: 8px;
     padding: 5px;
     outline: none;
-    border: 0;
+    margin-bottom: -7px;
 }
 /*
 input:focus	{
@@ -355,8 +361,12 @@ input:focus	{
     padding: 5px 0px;
     background-color: var(--corlistitens);
     color: #fff;
+    height: 50px;
     width: 100%;
-    margin-bottom: 1px;
+    margin-top: 7px; /* substituir por margin-bottom: 5px; na sublista */ 
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
 }
 
 .pst .list-pst ul li .pst-title .pst_name {
@@ -366,8 +376,9 @@ input:focus	{
     padding: 3px 5px;
 }
 
-.pst .list-pst ul li .pst-title .pst_name:hover {
-    color: #F2F2F2
+.pst .list-pst ul li .pst-title:hover {
+    background-color: #768a88;
+    color: #F2F2F2;
 }
 
 .pst .list-pst ul li .pst-title i {
@@ -378,6 +389,7 @@ input:focus	{
     color: #fff;
     font-size: 18px;
     transition: all 0.3s ease;
+    cursor: pointer;
 }
 
 /*.pst .list-pst ul li .pst-title i JavaScript*/
@@ -392,9 +404,10 @@ input:focus	{
     width:100%;
     background: #fff;
     padding: 10px;
-    border-radius: 0px;
-    margin-bottom: 1px;
-
+    border-radius: 0px 0px 8px 8px;
+    margin-bottom: 5px;
+    margin-top: -4px;
+    border: 1px solid #aaa;
 }
 
 .pst .list-pst .pst-content li.showMenu i.flecha{

@@ -10,22 +10,23 @@
 }
 
 body {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     background: #EFF3F8;
 }
 
 :root {
     --cornavbar: #FFF;
-    --corsidebar:#C6C7F5;
-    --cortextsidebar: #343566;
-    --corsub-menusidebar: #BABBE6;
-    --corlogout: #fff;
-    --corhovermainmenu: #BABBE6;
     --coriconemenu: #343566;
     --corlogoname: #343566;
+
+    --corbuttonaddbg: #EFF3F8;
+    --corbuttinaddlink: #343566;
+    --corbuttonaddul: #343566;
+
+    --corsidebar:#C6C7F5;
+    --cortextsidebar: #343566;
+    --corsubmenu: #BABBE6;
+    --corlogout: #fff;
+    --corhoversidebar: #BABBE6;
 }
 
 .navbar {
@@ -40,7 +41,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 10px 10px; 
-    z-index: +2;
+    z-index: +1;
 }
 
 .navbar .nav-left {
@@ -53,13 +54,36 @@ body {
 .navbar .nav-left .bx-menu {
     font-size: 35px;
     cursor: pointer;
-    color: var(--coriconemenu);
+    color:var(--coriconemenu);
 }
 
 .navbar .nav-left .logo .logo_name {
     font-size: 25px;
     font-weight: 600;
     color:var(--corlogoname);
+}
+
+.navbar .nav-right {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.navbar .nav-right .add{
+    border: none;
+    background: var(--corbuttonaddbg);
+    border-radius: 10px;
+    padding: 4px;
+}
+
+.navbar .nav-right .add:hover {
+    background-color: var(--corhoversidebar);
+}
+
+.navbar .nav-right .add {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--corbuttinaddlink);
 }
 
 .sidebar {
@@ -70,7 +94,6 @@ body {
     width: 100%;
     background: var(--corsidebar);
     transition: all 0.5s ease;
-    z-index: 2;
 }
 
 .sidebar.close {
@@ -90,7 +113,7 @@ body {
 }
 
 .sidebar .nav-links li:hover {
-    background: var(--corhovermainmenu);
+    background: var(--corhoversidebar);
 }
 
 .sidebar .nav-links li .icon-link{
@@ -123,13 +146,13 @@ body {
     font-size: 20px;
     font-weight: 400;
     color: var(--cortextsidebar);
-    
 }
 
 .sidebar .nav-links li .sub-menu {
     padding: 6px 6px 14px 80px;
     margin-top: -10px;
-    background-color: var(--corsub-menusidebar);
+    background-color: 
+    var(--corsubmenu);
     display: none;
 }
 
@@ -190,8 +213,8 @@ body {
 .sidebar .log-out {
     position: fixed;
     bottom: 0;
-    width: 100%;
     display: flex;
+    width: 100%;
     align-items: center;
     background: var(--corlogout);
     padding: 6px 0;
@@ -230,109 +253,33 @@ body {
     margin-right: 10px;
 }
 
-.close-page {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 30px;
-    width: 30px;
-}
-
-.close-button {
-    display: flex;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-    background-color: #EFF3F8; 
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
+.menuadd {
+    position: fixed;
+    top: 50px;
+    right:10px;
+    z-index: auto;
+    transition: all 0.5s ease;   
 } 
 
-.x-icon {
-    font-size: 30px;
-    color:var(--coriconemenu);
+.menuadd.close {
+    display: none;
 }
 
-.container {
-    position: relative;
-    width: 100vw;
-    height: calc(100vh - 50px);
-    top: 25px;
-    padding: 10px 15px;
+.menuadd ul {
+    list-style: none;
+    background-color: var(--corbuttonaddul);
+    padding: 10px 20px;
+    border-radius: 0px 0px 10px 10px;
+    line-height: 25px;
 }
 
-.box-title {
-    display: flex;
-    align-items: center;
-    background: #fff;
-    width: 100%;
-    height: 75px;
-    padding: 10px;
-    border-radius: 8px;
-    /*border: 1px solid #4C5958;*/
-    border: none;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-    margin-bottom: 10px;
+.menuadd ul li a{
+    color: #fff;   
+    text-decoration: none;
+    opacity: 0.7;
 }
 
-.title {
-    color: var(--corlogoname);
-    text-align: justify;
-    font-size: 16px;
-    font-weight: 500;
-    width: 100%;
-}
-
-.content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-}
-
-.input-box {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-}
-
-textarea {
-    resize: none;
-    outline: none;
-    width: 100%;
-    height: 430px;
-    padding:10px;
-    /*border: 1px solid #4C5958;*/
-    border: none;
-    border-radius: 8px;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
-}
-
-.controls {
-    display: flex;
-    align-items: center;
-    gap: 30px;
-}
-
-.controls button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #fff;
-    border: 1px solid #4c595862;
-    border-radius: 50%;
-    height: 35px;
-    width: 35px;
-    cursor: pointer;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-}
-
-.arrow-controls {
-    font-size: 30px;
-    color: #90A4AE;
+.menuadd ul li:hover a {
+    opacity: 1;
+    transition: all 0.5s ease;
 }

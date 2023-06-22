@@ -14,7 +14,16 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #F2F2F2;
+    background: #EFF3F8;
+}
+
+:root {
+    --cortitle: #343566;
+    --corinputborder: #BABBE6;
+    --corinputbutton: #fff;
+    --corbginputbutton: #343566;
+    --corlogin: #7E80F7;
+    --corloginlink: #7E80F7;
 }
 
 .container {
@@ -30,7 +39,7 @@ body {
     display: flex;
     font-size: 22px;
     font-weight: 600;
-    color: #4C5958;
+    color: var(--cortitle);
     justify-content: center;
 }
 
@@ -55,7 +64,7 @@ form .input-field {
     border: none;
     border-radius: 8px;
     padding: 0 15px;
-    border: 1px solid #4C5958;
+    border: 1px solid var(--corinputborder);
 }
 
 .invalid input {
@@ -104,10 +113,10 @@ form .input-field {
 }
 
 .button input {
-    color: #fff;
+    color: var(--corinputbutton);
     font-size: 16px;
     font-weight: 400;
-    background-color: #4C5958;
+    background-color: var(--corbginputbutton);
     cursor: pointer;
     transition: all 0.3s ease;
 }
@@ -120,13 +129,13 @@ form .input-field {
 }
 
 .login {
-    color: #4C5958;
+    color: var(--corlogin);
     font-size: 12px;
 }
 
 .login-link {
     text-decoration: none;
-    color: #4C5958;
+    color: var(--corloginlink);
     font-weight: 600;
 }
 

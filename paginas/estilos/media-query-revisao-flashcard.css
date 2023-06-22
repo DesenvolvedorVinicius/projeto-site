@@ -13,7 +13,7 @@
         width: 300px;
     }
 
-    main {
+    .container {
         width: 80vw;
         margin: auto;
         /*border: 1px solid rgba(0, 0, 0, 0.11);*/
@@ -33,7 +33,7 @@
         width: 300px;
     }
 
-    main {
+    .container {
         width: 65vw;
         margin: auto;
         /*border: 1px solid rgba(0, 0, 0, 0.11);*/

@@ -10,7 +10,7 @@
 }
 
 body {
-    background-color: #F2F2F2;
+    background-color: #EFF3F8;
 }
 
 :root {
@@ -276,6 +276,7 @@ body {
 main {
     z-index: -1;
     background: #F2F2F2;
+    padding: 0px 0px 50px 0px;
     /*border: 1px solid black;*/
 }
 
@@ -312,9 +313,11 @@ input:focus	{
 */
 .input-box i {
     display: flex;
-    align-items: center;
+    
+    align-content: center;
     color: #4C5958;
-    margin-left: -20px;
+    margin-left: -23px;
+    padding-top: 5px;
     font-size: 17px;
 }
 
@@ -377,8 +380,10 @@ input:focus	{
 }
 
 .pst .list-pst ul li .pst-title:hover {
-    background-color: #768a88;
-    color: #F2F2F2;
+    /*background-color: #768a88;
+    color: #F2F2F2;*/
+    border: 3px solid #8AA6A3;
+    transition: none;
 }
 
 .pst .list-pst ul li .pst-title i {
@@ -421,6 +426,10 @@ input:focus	{
     color: var(--corlistitens);
     font-size: 16px;
     padding: 3px 5px;
+
+}
+
+.pst .list-pst .pst-content li.showMenu .sub-menu-content:not(:last-child) {
     border-bottom: 1px solid #4C5958;
 }
 

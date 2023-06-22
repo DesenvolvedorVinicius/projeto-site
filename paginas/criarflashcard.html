@@ -3,10 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Revisar Flashcard | Página</title>
-    <link rel="stylesheet" href="estilos/revisao-flashcard.css">
-    <link rel="stylesheet" href="estilos/media-query-revisao-flashcard.css">
+    <title>Criar Flashcard</title>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="estilos/criarflashcard.css">
 </head>
 <body>
     <header>
@@ -19,15 +18,15 @@
                     <span class="logo_name">Logo</span>
                 </div>
             </div>
-            <div class="close-page">
-                <button class="close-button"><a href="flashcards.html"><i class='bx bx-x x-icon'></a></i></button>
+            <div class="nav-right">
+                <div class="add"><span>Adicionar</span></div>
             </div>
         </div>
     </header>
     <div class="sidebar close">
         <ul class="nav-links">
             <li>
-                <a href="home.html">
+                <a href="#">
                     <i class='bx bx-home-alt-2'></i>
                     <span class="link_name">Home</span>
                 </a>
@@ -42,7 +41,7 @@
                 </div>
                 <ul class="sub-menu">
                     <li><a href="#">Criar flashcard</a></li>
-                    <li><a href="flashcards.html">Revisar flashcard</a></li>
+                    <li><a href="flashcards.html">Revisar flashcards</a></li>
                 </ul>
             </li>
             <li>
@@ -54,9 +53,9 @@
                     <i class='bx bx-chevron-down arrow'></i>
                 </div>
                 <ul class="sub-menu">
-                    <li><a href="#">HTML & CSS</a></li>
-                    <li><a href="#">JavaScript</a></li>
-                    <li><a href="#">PHP & MySQL</a></li>
+                    <li><a href="#">Exemplo</a></li>
+                    <li><a href="#">Exemplo</a></li>
+                    <li><a href="#">Exemplo</a></li>
                 </ul>
             </li>
             <li>
@@ -94,22 +93,20 @@
             </li>
         </ul>
     </div>
-    <div class="container">
-        <div class="box-title">
-            <span class="title">Matemática - capítulo 21 : matrizes e determinantes</span>
-        </div>
-        <div class="content"> 
-            <div class="input-box">
-                <textarea name="" id="" cols="30" rows="10"></textarea>
-                <!-- Adicionar a função editar -->
-            </div>
-            <div class="controls">
-                <button><i class='bx bx-left-arrow-alt arrow-controls' ></i></button>
-                <button><i class='bx bx-right-arrow-alt arrow-controls' ></i></button>
-                <!-- Adicionar scrip que, para o primeiro flashcard, o botao prev esteja desabilitado : color: gray -->
-            </div>
-        </div>
+    <div class="menuadd close">
+        <ul class="sub-menu-add">
+            <li><a href="#">Flashcard</a></li>
+            <li><a href="#">Pasta</a></li>
+            <li><a href="#">Anotação</a></li>
+        </ul>
     </div>
+    <main>
+        <div class="container">
+            <div>
+                
+            </div>
+        </div>
+    </main>
 
     <script>
         let arrow = document.querySelectorAll(".arrow");
@@ -134,17 +131,7 @@
         menuaddBtn.addEventListener("click", ()=> {
             menuadd.classList.toggle("close");
         });
-        
-        let flecha = document.querySelectorAll(".flecha");
-        for (var i = 0; i < flecha.length; i++) {
-            flecha[i].addEventListener("click", (e)=>{
-            let flechaParent = e.target.parentElement.parentElement;
-            console.log(flechaParent);
-            flechaParent.classList.toggle("showMenu");
-            });
-        }
-    </script>
-
-
+    
+        </script>
 </body>
 </html>

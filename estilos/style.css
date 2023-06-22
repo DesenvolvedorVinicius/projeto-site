@@ -9,11 +9,11 @@ font-family: 'Poppins', sans-serif;
 */
 
 :root {
-    --cornavbar: #4C5958;
-    --corsidebar:#8AA6A3;
-    --cortextsidebar: #fff;
-    --corlogout: #4C5958;
-    --corfundo: #F2F2F2;
+    --cornavbar: #FFF;
+    --corsidebar:#C6C7F5;
+    --cortextsidebar: #343566;
+    --corlogout: #fff;
+    --corlistitens: #4C5958;
 }
 
 * {

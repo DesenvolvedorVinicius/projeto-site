@@ -19,7 +19,7 @@ body {
     --corlogoname: #343566;
 
     --corbuttonaddbg: #EFF3F8;
-    --corbuttinaddlink: #343566;
+    --corbuttonaddlink: #343566;
     --corbuttonaddul: #343566;
 
     --corsidebar:#C6C7F5;
@@ -83,7 +83,7 @@ body {
 .navbar .nav-right .add {
     font-size: 16px;
     font-weight: 500;
-    color: var(--corbuttinaddlink);
+    color: var(--corbuttonaddlink);
 }
 
 .sidebar {

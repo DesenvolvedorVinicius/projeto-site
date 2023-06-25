@@ -10,15 +10,38 @@
 }
 
 body {
-    background-color: #EFF3F8;
+    background: #EFF3F8;
+    margin-bottom: 50px;
 }
 
 :root {
-    --cornavbar: #4C5958;
-    --corsidebar:#8AA6A3;
-    --cortextsidebar: #fff;
-    --corlogout: #4C5958;
-    --corlistitens: #4C5958;
+    --cornavbar: #FFF;
+    --coriconemenu: #343566;
+    --corlogoname: #343566;
+
+    --corbuttonaddbg: #EFF3F8;
+    --corbuttonaddlink: #343566;
+    --corbuttonaddul: #343566;
+    --coraddbg: #5e5f9b;
+
+    --corsidebar:#C6C7F5;
+    --cortextsidebar: #343566;
+    --corsubmenu: #BABBE6;
+    --corlogout: #fff;
+    --corhoversidebar: #BABBE6;
+    --corsmlinks: #343566;
+
+    /* Conteúdo geral do site */
+
+    --corsearchi: #4c595862;
+    --corplaceholder: #4c595862;
+
+    --cortitle: #343566;
+    --corfoldername: white;
+    --corfolderhover :#BABBE6;
+    --corfolderbg: #5e5f9b;
+
+    --corfooterinfo: #343566;
 }
 
 .navbar {
@@ -46,13 +69,13 @@ body {
 .navbar .nav-left .bx-menu {
     font-size: 35px;
     cursor: pointer;
-    color:#FFF;
+    color:var(--coriconemenu);
 }
 
 .navbar .nav-left .logo .logo_name {
     font-size: 25px;
     font-weight: 600;
-    color:#fff;
+    color:var(--corlogoname);
 }
 
 .navbar .nav-right {
@@ -63,16 +86,20 @@ body {
 
 .navbar .nav-right .add{
     border: none;
-    background: #F2F2F2;
+    background: var(--corbuttonaddbg);
     border-radius: 10px;
-    padding: 3px;
+    padding: 4px;
+}
+
+.navbar .nav-right .add:hover {
+    background-color: var(--corhoversidebar);
 }
 
 .navbar .nav-right .add a{
     text-decoration: none;
     font-size: 16px;
     font-weight: 500;
-    color: #4C5958;
+    color: var(--corbuttonaddlink);
 }
 
 .sidebar {
@@ -103,7 +130,7 @@ body {
 }
 
 .sidebar .nav-links li:hover {
-    background: #4C5958;
+    background: var(--corhoversidebar);
 }
 
 .sidebar .nav-links li .icon-link{
@@ -141,7 +168,8 @@ body {
 .sidebar .nav-links li .sub-menu {
     padding: 6px 6px 14px 80px;
     margin-top: -10px;
-    background-color: #4C5958;
+    background-color: 
+    var(--corsubmenu);
     display: none;
 }
 
@@ -150,7 +178,7 @@ body {
 }
 
 .sidebar .nav-links li .sub-menu a {
-    color: #fff;
+    color: var(--corsmlinks);
     font-size: 15px;
     padding: 5px 0;
     white-space: nowrap;
@@ -246,7 +274,7 @@ body {
     position: fixed;
     top: 50px;
     right:10px;
-    z-index: auto;
+    z-index: 20;
     transition: all 0.5s ease;   
 } 
 
@@ -256,7 +284,7 @@ body {
 
 .menuadd ul {
     list-style: none;
-    background-color: #4C5958;
+    background-color: var(--coraddbg);
     padding: 10px 20px;
     border-radius: 0px 0px 10px 10px;
     line-height: 25px;
@@ -275,7 +303,7 @@ body {
 
 main {
     z-index: -1;
-    background: #F2F2F2;
+    background: #EFF3F8;
     padding: 0px 0px 50px 0px;
     /*border: 1px solid black;*/
 }
@@ -284,7 +312,7 @@ main {
     display: flex;
     align-items: center;
     margin: 75px 0px 0px 21px;
-    color: var(--corlistitens)
+    color: var(--cortitle);
 }
 
 .input-box {
@@ -315,14 +343,14 @@ input:focus	{
     display: flex;
     
     align-content: center;
-    color: #4C5958;
+    color: var(--corsearchi);
     margin-left: -23px;
     padding-top: 5px;
     font-size: 17px;
 }
 
 ::placeholder {
-    color: #4C5958;
+    color: var(--corplaceholder);
     font-size: 15px;
 }
 
@@ -362,19 +390,18 @@ input:focus	{
     justify-content: space-between;
     align-items: center;
     padding: 5px 0px;
-    background-color: var(--corlistitens);
-    color: #fff;
+    background-color: var(--corfolderbg);
     height: 50px;
     width: 100%;
     margin-top: 7px; /* substituir por margin-bottom: 5px; na sublista */ 
     border-radius: 8px;
     transition: all 0.3s ease;
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.1);
 }
 
 .pst .list-pst ul li .pst-title .pst_name {
     text-align: center;
-    color: #fff;
+    color: var(--corfoldername);
     font-size: 18px;
     padding: 3px 5px;
 }
@@ -382,7 +409,7 @@ input:focus	{
 .pst .list-pst ul li .pst-title:hover {
     /*background-color: #768a88;
     color: #F2F2F2;*/
-    border: 3px solid #8AA6A3;
+    border: 2px solid var(--corfolderhover);
     transition: none;
 }
 
@@ -423,7 +450,7 @@ input:focus	{
     display: block;
     text-decoration: none;
     text-align: left;
-    color: var(--corlistitens);
+    color: var(--cortitle);
     font-size: 16px;
     padding: 3px 5px;
     
@@ -443,7 +470,9 @@ footer {
 
 footer .profile-footer{
     background-color: var(--cornavbar);
-    color: #fff;
+    color: var(--corfooterinfo);
+    font-weight: 500;
+    font-size: 12px;
     position: fixed;
     bottom: 0;
     width: 100%;
@@ -459,8 +488,8 @@ footer .profile-footer .bottom-content {
 }
 
 footer .profile-footer img {
-    height: 50px;
-    width: 50px;
+    height: 40px;
+    width: 40px;
     object-fit: cover;
     border-radius: 16px;
     margin: 0 14px 0 16px;

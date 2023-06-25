@@ -19,13 +19,19 @@ body {
 
 :root {
     --cornavbar: #FFF;
-    --corsidebar:#C6C7F5;
-    --cortextsidebar: #343566;
-    --corsub-menusidebar: #BABBE6;
-    --corlogout: #fff;
-    --corhovermainmenu: #BABBE6;
     --coriconemenu: #343566;
     --corlogoname: #343566;
+
+    --corbuttonaddbg: #EFF3F8;
+    --corbuttonaddlink: #343566;
+    --corbuttonaddul: #343566;
+
+    --corsidebar:#C6C7F5;
+    --cortextsidebar: #343566;
+    --corsubmenu: #BABBE6;
+    --corlogout: #fff;
+    --corhoversidebar: #BABBE6;
+    --corsmlinks: #343566;
 }
 
 .navbar {
@@ -138,7 +144,7 @@ body {
 }
 
 .sidebar .nav-links li .sub-menu a {
-    color: #343566;
+    color: var(--corsmlinks);
     font-size: 15px;
     padding: 5px 0;
     white-space: nowrap;

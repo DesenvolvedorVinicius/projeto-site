@@ -11,13 +11,25 @@
 
 body {
     background: #EFF3F8;
+    margin-bottom: 50px;
 }
 
 :root {
-    --cornavbar: #4C5958;
-    --corsidebar:#8AA6A3;
-    --cortextsidebar: #fff;
-    --corlogout: #4C5958;
+    --cornavbar: #FFF;
+    --coriconemenu: #343566;
+    --corlogoname: #343566;
+
+    --corbuttonaddbg: #EFF3F8;
+    --corbuttonaddlink: #343566;
+    --corbuttonaddul: #343566;
+    --coraddbg: #5e5f9b;
+
+    --corsidebar:#C6C7F5;
+    --cortextsidebar: #343566;
+    --corsubmenu: #BABBE6;
+    --corlogout: #fff;
+    --corhoversidebar: #BABBE6;
+    --corsmlinks: #343566;
 }
 
 .navbar {
@@ -45,13 +57,13 @@ body {
 .navbar .nav-left .bx-menu {
     font-size: 35px;
     cursor: pointer;
-    color:#FFF;
+    color:var(--coriconemenu);
 }
 
 .navbar .nav-left .logo .logo_name {
     font-size: 25px;
     font-weight: 600;
-    color:#fff;
+    color:var(--corlogoname);
 }
 
 .navbar .nav-right {
@@ -62,15 +74,19 @@ body {
 
 .navbar .nav-right .add{
     border: none;
-    background: #F2F2F2;
+    background: var(--corbuttonaddbg);
     border-radius: 10px;
     padding: 3px;
 }
 
-.navbar .nav-right .add {
+.navbar .nav-right .add:hover {
+    background-color: var(--corhoversidebar);
+}
+
+.navbar .nav-right .add a {
     font-size: 16px;
     font-weight: 500;
-    color: #4C5958;
+    color: var(--corbuttonaddlink);
 }
 
 .sidebar {
@@ -81,6 +97,7 @@ body {
     width: 100%;
     background: var(--corsidebar);
     transition: all 0.5s ease;
+    z-index: 1;
 }
 
 .sidebar.close {
@@ -100,7 +117,7 @@ body {
 }
 
 .sidebar .nav-links li:hover {
-    background: #4C5958;
+    background: var(--corhoversidebar);
 }
 
 .sidebar .nav-links li .icon-link{
@@ -138,7 +155,8 @@ body {
 .sidebar .nav-links li .sub-menu {
     padding: 6px 6px 14px 80px;
     margin-top: -10px;
-    background-color: #4C5958;
+    background-color: 
+    var(--corsubmenu);
     display: none;
 }
 
@@ -147,7 +165,7 @@ body {
 }
 
 .sidebar .nav-links li .sub-menu a {
-    color: #fff;
+    color: var(--corsmlinks);
     font-size: 15px;
     padding: 5px 0;
     white-space: nowrap;
@@ -253,7 +271,7 @@ body {
 
 .menuadd ul {
     list-style: none;
-    background-color: #4C5958;
+    background-color: var(--coraddbg);
     padding: 10px 20px;
     border-radius: 0px 0px 10px 10px;
     line-height: 25px;
@@ -272,7 +290,7 @@ body {
 
 main {
     z-index: -1;
-    background: #F2F2F2;
+    background: #EFF3F8;
 }
 
 .recente {

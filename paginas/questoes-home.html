@@ -108,7 +108,12 @@
             </div>
             <div class="content">
                 <div class="question-header">
-                    Questão 1
+                    <div class="qnumber">
+                        Questão 1 
+                    </div>
+                    <div class="qclassification">
+                        - Linguagens | Língua estrangeira
+                    </div>
                 </div>
                 <div class="qtext">
                     As my official bio reads, I was made in Cuba, assembled
@@ -179,7 +184,8 @@
                             </div>
                         </label>
                 </fieldset>
-                <button class="ans-button"><span class="ans-link">Responder</span></button>
+                <button id="responderButton" class="ans-button">Responder</button>
+                <div class="message"></div>
             </div>
         </div>
     </main>
@@ -212,8 +218,84 @@
             menuadd.classList.add("close");
         }
         });
+        /*
+        const answerButton = document.querySelector('.ans-button');
+
+        answerButton.addEventListener('click', () => {
+        const selectedOption = document.querySelector('.inp:checked');
+        const message = document.querySelector('.message');
+
+        if (selectedOption) {
+            // Opção selecionada, remover classe "disabled" do botão
+            answerButton.classList.remove('disabled');
+            
+            // Verificar se a opção selecionada é a correta
+            if (selectedOption.id === 'qc') {
+            message.textContent = 'Parabéns, você acertou!';
+            message.style.color = 'green'; // Definir cor verde para acerto
+            } else {
+            message.textContent = 'Você errou. Alternativa correta: C';
+            message.style.color = 'red'; // Definir cor vermelha para erro
+            }
+        } else {
+            // Nenhuma opção selecionada, adicionar classe "disabled" ao botão
+            answerButton.classList.add('disabled');
+
+            // Limpar a mensagem e redefinir cor padrão
+            message.textContent = '';
+            message.style.color = ''; // Cor padrão
+        }
+        });
+        */
+        
+        const answerButton = document.getElementById('responderButton');
+        const radioInputs = document.querySelectorAll('input[name="qoption"]');
+        const message = document.querySelector('.message');
+
+        radioInputs.forEach(input => {
+            input.addEventListener('change', () => {
+                if (input.checked) {
+                    answerButton.removeAttribute('disabled');
+                } else {
+                    answerButton.setAttribute('disabled', true);
+                }
+            });
+        });
+
+        answerButton.addEventListener('click', () => {
+            const selectedOption = document.querySelector('.inp:checked');
+            
+            if (selectedOption) {
+                if (selectedOption.id === 'qc') {
+                    message.textContent = 'Parabéns, você acertou!';
+                    message.style.color = 'green';
+                } else {
+                    message.textContent = 'Você errou. Alternativa correta: C';
+                    message.style.color = 'red';
+                }
+            } else {
+                message.textContent = '';
+                message.style.color = '';
+            }
+        }); 
+
+        /*
+        document.getElementById("botao").disabled = true;
+
+        document.getElementById("input").addEventListener("input", function(event){
     
-        </script>
+        var conteudo = document.getElementById("input").checked;
+
+        //valida conteudo do input 
+        if (conteudo!== null && conteudo !== '') {
+        //habilita o botão
+        document.getElementById("botao").disabled = false;
+        } else {
+        document.getElementById("botao").disabled = true;
+        }
+        }); */
+    
+    </script>
         
 </body>
 </html>

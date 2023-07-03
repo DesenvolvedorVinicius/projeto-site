@@ -10,7 +10,7 @@
 }
 
 body {
-    background: #EFF3F8;
+    background: #FFF;
     margin-bottom: 50px;
 }
 
@@ -33,7 +33,7 @@ body {
 
     /* Conteúdo geral do site */
     
-    --corbgcontainertitle: #FFF;
+    --corbgcontainertitle: #EFF3F8;
     --corbgbordertitle: #BABBE6;
     --corbgcontent: #FFF;
 }
@@ -104,7 +104,7 @@ body {
     width: 100%;
     background: var(--corsidebar);
     transition: all 0.5s ease;
-    z-index: 10;
+    z-index: 1000;
 }
 
 .sidebar.close {
@@ -311,7 +311,7 @@ main {
     background-color: var(--corbgcontainertitle);
     padding: 10px;
     border-radius: 8px;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    /*box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);*/
 }
 
 .content {
@@ -319,18 +319,30 @@ main {
     padding: 10px;
     margin-top: 10px;
     border-radius: 8px;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    /*box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);*/
 }
 
 .question-header {
-    padding: 10px;
+    padding: 6px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
     border: 1px solid #BABBE6;
     border-radius: 8px;
     margin-bottom: 10px;
 }
 
+.qnumber {
+    font-size: 15px;
+}
+
+.qclassification {
+    font-size: 14px;
+}
+
 .qtext {
     text-align: justify;
+    font-size: 14px;
 }
 
 .qsource {
@@ -342,6 +354,7 @@ main {
 
 .qenunciation {
     margin: 10px 0;
+    font-size: 14px;
 }
 
 .alternatives {
@@ -361,6 +374,7 @@ main {
     display: flex;
     align-items: center;
     padding: 6px 0 6px 25px;
+    cursor: pointer;
 }
 
 .inp {
@@ -371,6 +385,7 @@ main {
     background-color: #babbe673;
     z-index: -1000;
     border: 1px solid black;
+    z-index: 0;
 }
 
 .inp:checked + .alt-a {
@@ -384,6 +399,7 @@ main {
     background-color: #babbe673;
     z-index: -1000;
     border: 1px solid black;
+    z-index: 0;
 }
 
 .inp:checked + .alt-b {
@@ -397,6 +413,7 @@ main {
     background-color: #babbe673;
     z-index: -1000;
     border: 1px solid black;
+    z-index: 0;
 }
 
 .inp:checked + .alt-c {
@@ -410,6 +427,7 @@ main {
     background-color: #babbe673;
     z-index: -1000;
     border: 1px solid black;
+    z-index: 0;
 }
 
 .inp:checked + .alt-d {
@@ -423,6 +441,7 @@ main {
     background-color: #babbe673;
     z-index: -1000;
     border: 1px solid black;
+    z-index: 0;
 }
 
 .inp:checked + .alt-e {
@@ -455,7 +474,7 @@ main {
     position: absolute;
     top: calc( 50% - 13px);
     left: 0px;
-    padding-left: 5px;
+    padding-left: 6px;
     padding-top:1px;
     align-items: center;
 }
@@ -495,7 +514,7 @@ main {
     position: absolute;
     top: calc( 50% - 13px);
     left: 0px;
-    padding-left: 5px;
+    padding-left: 6px;
     padding-top: 1px;
     align-items: center;
 }
@@ -515,7 +534,7 @@ main {
     position: absolute;
     top: calc( 50% - 13px);
     left: 0px;
-    padding-left: 6px;
+    padding-left: 7px;
     padding-top: 1px;
     align-items: center;
 }
@@ -533,27 +552,39 @@ main {
 
 .ans {
     margin-left: 10px;
+    font-size: 14px;
+}
+
+.ans-button[disabled] {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+    cursor: pointer;
+    font-weight: 600;
+    /*background-color: #EFF3F8;*/
+    width: 100%;
+    padding: 8px 0;
+    border-radius: 8px;
+    border: none;
+    margin-top: 5px;
+    opacity: .5;
 }
 
 .ans-button {
-    display: flex;
-    background-color: #EFF3F8;
-    width: 100%;
-    border-radius: 8px;
-    border: none;
+    background-color: blue;
 }
 
 .ans-button:hover {
     background-color: #BABBE6;
 }
 
-.ans-link {
-    display: flex;
-    align-items: center;
-    margin: auto;
-    cursor: pointer;
-    padding: 8px 80px;
-    font-weight: 500;
+.message {
+    font-size: 14px;
 }
+
+
+
+  
 
 

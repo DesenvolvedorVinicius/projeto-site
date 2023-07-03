@@ -311,7 +311,7 @@ main {
     background: #FFF;
     display: flex;
     flex-direction: column;
-    border: 1px solid #4C5958;
+    /*border: 1px solid #4C5958;*/
     border-radius: 7px;
     margin-top: 5px;
     margin-bottom: 15px;
@@ -320,28 +320,28 @@ main {
 }
 
 .box-recente-1:hover {
-    border-left: 5px solid #A4A69C;
+    border-left: 5px solid #babbe67c;
 }
 
 .box-recente-2 {
     background: #FFF;
     display: flex;
     flex-direction: column;
-    border: 1px solid #4C5958;
+    /*border: 1px solid #4C5958;*/
     border-radius: 7px;
     box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.404);
     height: 150px;
 }
 
 .box-recente-2:hover {
-    border-left: 5px solid #8AA6A3;
+    border-left: 5px solid #babbe67c;
 }
 
 .box-recente-3 {
     display: none;
     background: #FFF;
     flex-direction: column;
-    border: 1px solid #4C5958;
+    /*border: 1px solid #4C5958;*/
     border-radius: 7px;
     margin-top: 5px;
     margin-bottom: 15px;
@@ -350,7 +350,7 @@ main {
 }
 
 .box-recente-3:hover {
-    border-left: 5px solid #8AA6A3;
+    border-left: 5px solid #babbe67c;
 }
 
 .main-biblioteca {
@@ -372,7 +372,7 @@ main {
     background: #FFF;
     flex-direction: column;
     height: 75px;
-    border: 1px solid #4C5958;
+    /*border: 1px solid #4C5958;*/
     border-radius: 7px;
     box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.404);
     margin-top: 5px;
@@ -380,7 +380,7 @@ main {
 }
 
 .box-main-biblioteca-1:hover {
-    border-left: 5px solid #8AA6A3;
+    border-left: 5px solid #babbe67c;
 }
 
 .box-main-biblioteca-2 {
@@ -388,13 +388,13 @@ main {
     background: #FFF;
     flex-direction: column;
     height: 75px;
-    border: 1px solid #4C5958;
+    /*border: 1px solid #4C5958;*/
     border-radius: 7px;
     box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.404);
 }
 
 .box-main-biblioteca-2:hover {
-    border-left: 5px solid #8AA6A3;
+    border-left: 5px solid #babbe67c;
 }
 
 .ultimas-anotacoes {
@@ -416,14 +416,14 @@ main {
     background: #FFF;
     flex-direction: column;
     height: 100px;
-    border: 1px solid #4C5958;
+    /*border: 1px solid #4C5958;*/
     border-radius: 7px;
     box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.404);
     margin-top: 5px;
 }
 
 .box-ultimas-anotacoes:hover {
-    border-left: 5px solid #8AA6A3;
+    border-left: 5px solid #babbe67c;
 }
 
 .frequencia {
@@ -444,12 +444,12 @@ main {
     background: #FFF;
     flex-direction: column;
     height: 100px;
-    border: 1px solid #4C5958;
+    /*border: 1px solid #4C5958;*/
     border-radius: 7px;
     box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.404);
     margin-top: 5px;
 }
 
 .box-frequencia:hover {
-    border-left: 5px solid #8AA6A3; 
+    border-left: 5px solid #babbe67c; 
 }
